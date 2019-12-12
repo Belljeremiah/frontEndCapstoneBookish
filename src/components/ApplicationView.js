@@ -1,8 +1,12 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
+import Home from './home/Home'
+import Registration from './auth/Registration'
 // Above is where I import my components, including the ability to extend Component from React in the form of Class Names.
 
 
 class ApplicationViews extends Component {
+    // isAuthenticated = () => localStorage.getItem("credentials") !== null
+    
     render() {
         return (
             <React.Fragment>
@@ -20,9 +24,11 @@ class ApplicationViews extends Component {
                 }} />
 
                 <Route exact path="/registration" render={(props) => {
-                    return <Registration />
+                    return <Registration {...props} />
                 }} />
 
             </React.Fragment>
         )
 }}
+
+export default ApplicationViews;
