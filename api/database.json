@@ -14,7 +14,7 @@
         "message": "test message"
         }
     ],
-    "volumes": [
+    "books": [
         {
         "id": 1,
         "title": "test Title",
@@ -22,7 +22,7 @@
         "genre": "test genre",
         "userId": 1,
         "timesRead": 4,
-        "lastRead": 2019/02/12,
+        "lastRead": 05/02/2019,
         "borrowed": false,
         "ownded": true,
         "review": "test Review",
