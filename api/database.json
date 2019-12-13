@@ -1,50 +1,57 @@
 {
-    "users": [
-        {
-        "id": 1,
-        "userName": "test1user",
-        "password": "password1",
-        "email": "test@email.com"
-        }
-    ],
-    "messages": [
-        {
-        "id": 1,
-        "userId": 1,
-        "message": "test message"
-        }
-    ],
-    "volumes": [
-        {
-        "id": 1,
-        "title": "test Title",
-        "author": "test author",
-        "genre": "test genre",
-        "userId": 1,
-        "timesRead": 4,
-        "lastRead": 2019/02/12,
-        "borrowed": false,
-        "ownded": true,
-        "review": "test Review",
-        "synopsis": "test synopsis",
-        "imageUrl": "test Url",
-        "bookShelfId": 1,
-        "rating": 3
-        }
-    ],
-    "bookshelves": [
-        {
-            "id": 1,
-            "shelfName": "test shelf",
-            "userId": 1,
-            "genre": "test genre shelf"
-        }
-    ],
-    "Friends": [
-        {
-            "id": 1,
-            "userId": 1,
-            "loggedInUserId": 1
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "userName": "test1user",
+      "password": "password1",
+      "email": "test@email.com"
+    },
+    {
+      "username": "test5",
+      "email": "test5@email.com",
+      "password": "test5",
+      "confirmPassword": "test5",
+      "id": 2
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "message": "test message"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "test Title",
+      "author": "test author",
+      "genre": "test genre",
+      "userId": 1,
+      "timesRead": 4,
+      "lastRead": "2019-05-05",
+      "borrowed": false,
+      "ownded": true,
+      "review": "test Review",
+      "synopsis": "test synopsis",
+      "imageUrl": "test Url",
+      "bookShelfId": 1,
+      "rating": 3
+    }
+  ],
+  "bookshelves": [
+    {
+      "id": 1,
+      "shelfName": "test shelf",
+      "userId": 1,
+      "genre": "test genre shelf"
+    }
+  ],
+  "Friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "loggedInUserId": 1
+    }
+  ]
 }

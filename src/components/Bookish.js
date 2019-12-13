@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import NavBar from './nav/NavBar';
+import ApplicationViews from './ApplicationViews';
+import UsersManager from '../modules/UsersManager';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Bookish extends Component {
+    state ={
+        user: false,
+        users: []
+    }
+
+isRegistered = () => localStorage.getItem("credentials") !==null
+
+setUser = (registerObj) => {
+    this.setState({
+        user: this.isRegistered()
+    });
+
+UsersManager.post(registerObj)
+.then(newUser => {
+    console.log("newUser", newUser)
+    localStorage.setItem(
+        "credentials",
+        JSON.stringify(newUser)
+    )
+    this.setState({users: newUser})})
 }
 
-export default App;
+componentDidMount(){
+    this.setState({
+        user: this.isRegistered()
+});
+
+UsersManager.getAllUsers()
+    .then(users => this.setState({users: users}))
+}
+
+render() {
+        return (
+            <React.Fragment>
+                <NavBar
+                user={this.state.user} />
+                <ApplicationViews
+                user={this.state.user}
+                setUser={this.setUser} 
+                />
+            </React.Fragment>
+        );
+    }
+}
+
+export default Bookish;
