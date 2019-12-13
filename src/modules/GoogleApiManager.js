@@ -1,16 +1,9 @@
-const baseURL = "http://localhost:5002"
+// import myApiKey from 'myApiKey';
 
 export default {
-    getAllUsers() {
-        return fetch(`${baseURL}/users`).then(result => result.json())
-    },
-    post(newUser) {
-        return fetch(`${baseURL}/users`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(newUser)
-        }).then(data =>data.json())
+    getAllBookResults(volume, author) {
+        return fetch(`https://www.googleapis.com/books/v1/volumes?q=${volume}&+inauthor=${author}&key=AIzaSyBst8M9zshncjh0vr50sQPdKeoVYDDGJCQ`).then(result => result.json())
+    }
+    
 }
-}
+
