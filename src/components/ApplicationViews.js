@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Route } from "react-router-dom"
 import Home from './home/Home'
 import Registration from './auth/Registration'
+import Login from './auth/Login'
 // Above is where I import my components, including the ability to extend Component from React in the form of Class Names.
 
 
@@ -15,17 +17,24 @@ class ApplicationViews extends Component {
                     return <Home />
                 }} />
 
-                <Route exact path="/books" render={(props) => {
+                {/* <Route exact path="/books" render={(props) => {
                     return <Books />
                 }} />
 
                 <Route exact path="/shelves" render={(props) => {
                     return <Shelves />
-                }} />
+                }} /> */}
 
                 <Route exact path="/registration" render={(props) => {
-                    return <Registration {...props} />
+                    return <Registration setUser={this.props.setUser} {...props} />
                 }} />
+
+                
+                <Route exact path="/login" render={(props) => {
+                    return <Login setUser={this.props.setUser} {...props} />
+                }} />
+
+                
 
             </React.Fragment>
         )

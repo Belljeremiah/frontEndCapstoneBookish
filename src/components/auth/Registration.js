@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { read } from 'fs'
+
 
 class Registration extends Component {
     state = {
@@ -16,7 +16,7 @@ class Registration extends Component {
     }
 
     handleRegistrationSubmit = (e) => {
-        event.preventDefault()
+        e.preventDefault()
         if ( this.state.password === this.state.confirmPassword ) {
             localStorage.setItem(
                 "credentials",
@@ -33,7 +33,7 @@ class Registration extends Component {
                 password: this.state.password,
                 confirmPassword: this.state.confirmPassword
             })
-    this.props.history.push("/users");
+    this.props.history.push("/");
         } else {
             window.alert("Hey match your fields, don't cross your streams!")
         }
@@ -45,29 +45,29 @@ class Registration extends Component {
                     <fieldset>
                     <div className="formgrid">
                         <label htmlFor="inputUsername">Username</label>
-                        <input onChange={this.handleRegistrationSubmit} 
+                        <input onChange={this.registrationFieldChange} 
                     type="username"
                     id="username"
                     placeholder="Username"
                     required="" autoFocus="" />
 
                         <label htmlFor="inputEmail">Email Address</label>
-                        <input onChange={this.handleRegistrationSubmit}        type="email"
+                        <input onChange={this.registrationFieldChange}        type="email"
                     id="email"
                     placeholder="Email Address"
                     required="" autoFocus="" />
 
                     <label htmlFor="inputPassword">Password</label>
-                    <input onChange={this.handleRegistrationSubmit} type="password"
+                    <input onChange={this.registrationFieldChange} type="password"
                     id="password"
                     placeholder="Password"
                     required="" autoFocus="" />
 
-                    <label htmlFor="confirm-password">Confirm Password</label>
-                    <input onChange={this.signUpFieldChange} type="password"
+                    <label htmlFor="confirmPassword">Confirm Password</label>
+                    <input onChange={this.registrationFieldChange} type="password"
                     id="confirmPassword"
                     placeholder="Confirm Password"
-                    required autoFocus="" />
+                    required="" autoFocus="" />
                     </div>
                     <button id="register-button" className="button" type="submit">Submit Registration</button>
                     </fieldset>

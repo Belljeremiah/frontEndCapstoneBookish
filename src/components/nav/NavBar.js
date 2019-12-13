@@ -12,8 +12,8 @@ class NavBar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>
                     </li>
-                    {/* {(this.props.user) ?
-                    <> */}
+                    {(this.props.user) ?
+                    <>
                     <li className="nav-item">
                         <Link className="nav-link" to="/books">Books</Link>
                     </li>
@@ -30,14 +30,14 @@ class NavBar extends Component {
                         <Link className="nav-link" to="/messages">Messages</Link>
                     </li>
                     
-                {/* </>
-                    : null } */}
+                </>
+                    : null }
                 </ul>
                 <span className="navbar-text">
                     <ul className="nav nav-pills nav-fill">
                         
                     <li className="nav-item">
-                        <Link className="nav-link" to="/registration">Register</Link>
+                        <Link className="nav-link" to="/login">Login</Link>
                     </li>
                         
                     

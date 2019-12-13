@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
+import Bookish from './components/Bookish';
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 ReactDOM.render(
 <Router>
@@ -11,3 +14,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+

@@ -28,12 +28,13 @@ class Login extends Component {
             password: this.state.password
         })
     )
-    this.props.history.push("/users");
+    this.props.history.push("/");
 
   }
 
   render() {
     return (
+      <React.Fragment>
       <form onSubmit={this.handleLogin}>
         <fieldset>
             <h3>Please sign in</h3>
@@ -53,8 +54,11 @@ class Login extends Component {
             <button type="submit">
                 Sign in
             </button>
+            <br></br>
         </fieldset>
       </form>
+            <button onClick={() => this.props.history.push("/Registration")}>Register New Account</button>
+            </React.Fragment>
     )
   }
 
