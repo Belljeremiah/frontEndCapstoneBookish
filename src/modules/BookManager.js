@@ -7,7 +7,7 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/books`).then(result => result.json())
   },
-  delete(id) {
+  deleteBook(id) {
     return fetch(`http://localhost:5002/books/${id}`, {
         method: "DELETE"
     })

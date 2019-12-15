@@ -12,6 +12,13 @@
       "password": "test5",
       "confirmPassword": "test5",
       "id": 2
+    },
+    {
+      "username": "test99",
+      "email": "test99@email.com",
+      "password": "test99",
+      "confirmPassword": "test99",
+      "id": 3
     }
   ],
   "messages": [
@@ -22,6 +29,54 @@
     }
   ],
   "books": [
+    {
+      "id": 1,
+      "title": "test Title",
+      "author": "test author",
+      "genre": "test genre",
+      "userId": 1,
+      "timesRead": 4,
+      "lastRead": "2019-05-05",
+      "borrowed": false,
+      "ownded": true,
+      "review": "test Review",
+      "synopsis": "test synopsis",
+      "imageUrl": "test Url",
+      "bookShelfId": 1,
+      "rating": 3
+    },
+    {
+      "id": 1,
+      "title": "test Title",
+      "author": "test author",
+      "genre": "test genre",
+      "userId": 1,
+      "timesRead": 4,
+      "lastRead": "2019-05-05",
+      "borrowed": false,
+      "ownded": true,
+      "review": "test Review",
+      "synopsis": "test synopsis",
+      "imageUrl": "test Url",
+      "bookShelfId": 1,
+      "rating": 3
+    },
+    {
+      "id": 1,
+      "title": "test Title3",
+      "author": "test author3",
+      "genre": "test genre3",
+      "userId": 3,
+      "timesRead": 4,
+      "lastRead": "2019-05-05",
+      "borrowed": false,
+      "ownded": true,
+      "review": "test Review3",
+      "synopsis": "test synopsis3",
+      "imageUrl": "test Url3",
+      "bookShelfId": 1,
+      "rating": 3
+    },
     {
       "id": 1,
       "title": "test Title",

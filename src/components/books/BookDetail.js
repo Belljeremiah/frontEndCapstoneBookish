@@ -17,7 +17,7 @@ class BookDetail extends Component {
     console.log("BookDetail: ComponentDidMount");
     //get(id) from BookManager and hang on to the data; put it into state
     // This gathers that id from my API manager in the modules section.
-    BookManager.get(this.props.BookId)
+    BookManager.get(this.props.bookId)
     .then((book) => {
       this.setState({
         title: book.title,
@@ -33,19 +33,19 @@ class BookDetail extends Component {
   handleDelete = () => {
     //invoke the delete function in BookManger and re-direct to the Book list.
     this.setState({loadingStatus: true})
-    BookManager.delete(this.props.BookId)
-    .then(() => this.props.history.push("/Books"))
+    BookManager.delete(this.props.bookId)
+    .then(() => this.props.history.push("/books"))
 }
   // This is what is invoked after this BookDetail is ran and is the path for the Route to follow and render to the DOM it is being fed the props state from the previous function.
   render() {
     return (
       <div className="card">
         <div className="card-content">
-            <h1>Book Title: <span className="book-title">{this.props.books.title}</span></h1>
-                <h3>Book Author: {this.props.book.author}</h3>
-                <h3>Book Genre: {this.props.book.genre}</h3>
+            <h1>Book Title: <span className="book-title">{this.state.title}</span></h1>
+                <h3>Book Author: {this.state.author}</h3>
+                <h3>Book Genre: {this.state.genre}</h3>
                 <h3>ImageUrl</h3>
-                <h3>Rating: {this.props.book.rating}</h3>
+                <h3>Rating: {this.state.rating}</h3>
             <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete Book</button>
         </div>
       </div>

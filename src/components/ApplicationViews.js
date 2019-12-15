@@ -3,7 +3,10 @@ import { Route } from "react-router-dom"
 import Home from './home/Home'
 import Registration from './auth/Registration'
 import Login from './auth/Login'
-import BookCard from './books/BookCard'
+import BookForm from './books/BookForm'
+import BookList from './books/BookList'
+import BookDetail from './books/BookDetail'
+import BookEditForm from './books/BookEditForm'
 // Above is where I import my components, including the ability to extend Component from React in the form of Class Names.
 
 
@@ -19,7 +22,24 @@ class ApplicationViews extends Component {
                 }} />
 
                 <Route exact path="/books" render={(props) => {
-                    return <BookCard {...props}/>
+                    return <BookList {...props}/>
+                }} />
+
+                <Route exact path="/books/:bookId(\d+)" render={(props) => {
+                return <BookDetail bookId={parseInt(props.match.params.bookId)} 
+                // THis is a spread operator that seperates out all the key values in the object and sets them all as props. Includes History and match we want history for history.push router property.
+                {...props}
+                />
+                }} />
+
+                <Route
+                path="/books/:bookId(\d+)/edit" render={props => {
+                return <BookEditForm {...props} />
+                }}
+                />
+
+                <Route path="/books/new" render={(props) => {
+                return <BookForm {...props} />
                 }} />
 
                 {/* <Route exact path="/shelves" render={(props) => {
