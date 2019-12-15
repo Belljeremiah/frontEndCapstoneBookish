@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 class BookCard extends Component {
     
     render() {
-        console.log(this.props.book)
+        console.log(this.props.book.id)
         return (
             <>
                 <div className="card">

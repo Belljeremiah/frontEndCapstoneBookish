@@ -40,7 +40,7 @@ class BookForm extends Component {
 
     render(){
 console.log(this.state.author)
-debugger
+console.log("Book Form Firing")
         return(
             <>
             <form>

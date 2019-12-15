@@ -33,7 +33,7 @@ class BookDetail extends Component {
   handleDelete = () => {
     //invoke the delete function in BookManger and re-direct to the Book list.
     this.setState({loadingStatus: true})
-    BookManager.delete(this.props.bookId)
+    BookManager.deleteBook(this.props.bookId)
     .then(() => this.props.history.push("/books"))
 }
   // This is what is invoked after this BookDetail is ran and is the path for the Route to follow and render to the DOM it is being fed the props state from the previous function.

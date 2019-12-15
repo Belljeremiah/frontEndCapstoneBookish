@@ -19,6 +19,13 @@
       "password": "test99",
       "confirmPassword": "test99",
       "id": 3
+    },
+    {
+      "username": "me",
+      "email": "me@email.com",
+      "password": "me",
+      "confirmPassword": "me",
+      "id": 4
     }
   ],
   "messages": [
@@ -30,39 +37,7 @@
   ],
   "books": [
     {
-      "id": 1,
-      "title": "test Title",
-      "author": "test author",
-      "genre": "test genre",
-      "userId": 1,
-      "timesRead": 4,
-      "lastRead": "2019-05-05",
-      "borrowed": false,
-      "ownded": true,
-      "review": "test Review",
-      "synopsis": "test synopsis",
-      "imageUrl": "test Url",
-      "bookShelfId": 1,
-      "rating": 3
-    },
-    {
-      "id": 1,
-      "title": "test Title",
-      "author": "test author",
-      "genre": "test genre",
-      "userId": 1,
-      "timesRead": 4,
-      "lastRead": "2019-05-05",
-      "borrowed": false,
-      "ownded": true,
-      "review": "test Review",
-      "synopsis": "test synopsis",
-      "imageUrl": "test Url",
-      "bookShelfId": 1,
-      "rating": 3
-    },
-    {
-      "id": 1,
+      "id": 3,
       "title": "test Title3",
       "author": "test author3",
       "genre": "test genre3",
@@ -78,20 +53,11 @@
       "rating": 3
     },
     {
-      "id": 1,
-      "title": "test Title",
-      "author": "test author",
-      "genre": "test genre",
-      "userId": 1,
-      "timesRead": 4,
-      "lastRead": "2019-05-05",
-      "borrowed": false,
-      "ownded": true,
-      "review": "test Review",
-      "synopsis": "test synopsis",
-      "imageUrl": "test Url",
-      "bookShelfId": 1,
-      "rating": 3
+      "title": "meTitle",
+      "author": "meAuthor",
+      "genre": "meGenre",
+      "rating": "meRating",
+      "id": 5
     }
   ],
   "bookshelves": [

@@ -21,7 +21,7 @@ componentDidMount(){
 }
 
 deleteBook = id => {
-    BookManager.delete(id)
+    BookManager.deleteBook(id)
     .then(() => {
     BookManager.getAll()
     .then((newBooks) => {
@@ -49,7 +49,7 @@ render() {
             <BookCard 
             key={book.id} 
             book={book} 
-            deletebook={this.deletebook}
+            deleteBook={this.deleteBook}
             {...this.props}
             />
             )}
