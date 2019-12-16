@@ -1,8 +1,8 @@
-// import myApiKey from 'myApiKey';
+import  ApiKey  from '../apikey'
 
 export default {
-    getAllBookResults(volume, author) {
-        return fetch(`https://www.googleapis.com/books/v1/volumes?q=${volume}&+inauthor=${author}&key=AIzaSyBst8M9zshncjh0vr50sQPdKeoVYDDGJCQ`).then(result => result.json())
+    get(volume, author) {
+        return fetch(`https://www.googleapis.com/books/v1/volumes?q=${volume}&+inauthor=${author}&key=${ApiKey}`).then(result => result.json())
     }
     
 }

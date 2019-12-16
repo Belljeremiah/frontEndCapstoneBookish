@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BookManager from '../../modules/BookManager';
+import GoogleApiManager from '../../modules/GoogleApiManager';
 
 
 class BookForm extends Component {
@@ -17,12 +18,33 @@ class BookForm extends Component {
         this.setState(stateToChange);
     };
 
+    // bookSearch = (volume, author) => {
+    // GoogleApiManager.getAll(volume, author)
+    // .then(result => result.json)
+    // .then(console.log(result))
+    // }
+    searchNewBook = e => {
+        e.preventDefault();
+        if (this.state.title === "" || this.state.author === "") {
+            window.alert("At Least a Book Title and Author!!!");
+        } else {
+            this.setState({ loadingStatus: true });
+            const volume = {
+                volume: this.state.title,
+                author: this.state.author,
+    };
+
+    GoogleApiManager.get(volume)
+    .then(console.log("volume", volume))
+}
+};
+
     /*  Local method for validation, set loadingStatus, create book, object, invoke the bookManager post method, and redirect to the full book list
     */
     constructNewBook = e => {
         e.preventDefault();
         if (this.state.title === "" || this.state.author === "" || this.state.genre === "" ) {
-            window.alert("Please input an book name and author");
+            window.alert("At Least a Book Title and Author!!!");
         } else {
             this.setState({ loadingStatus: true });
             const book = {
@@ -32,7 +54,7 @@ class BookForm extends Component {
                 rating: this.state.rating,
             };
 
-            // Create the book and redirect user to book list
+            // Where the user makes a book and goes to book list
             BookManager.post(book)
             .then(() => this.props.history.push("/books"));
         }
@@ -89,6 +111,11 @@ console.log("Book Form Firing")
                         disabled={this.state.loadingStatus}
                         onClick={this.constructNewBook}
                         >Submit</button>
+                        <button
+                        type="button"
+                        disabled={this.state.loadingStatus}
+                        onClick={this.searchNewBook}
+                        >Search</button>
                     </div>
                 </fieldset>
             </form>

@@ -7,7 +7,7 @@ class NavBar extends Component {
     render() {
         return (
             <React.Fragment>
-            <nav className="navbar bg-dark text-white flex-md-nowrap p-0 shadow">
+            <nav className="navbar text-white flex-md-nowrap p-0 shadow">
                 <ul className="nav nav-pills nav-fill">
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>

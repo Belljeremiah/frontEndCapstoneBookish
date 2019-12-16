@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import the components we will need
 import BookCard from './BookCard'
 import BookManager from '../../modules/BookManager'
+import "bootstrap/dist/css/bootstrap.min.css"
 
 class BookList extends Component {
     //define what this component needs to render
@@ -32,24 +33,26 @@ deleteBook = id => {
     })
 }
 
+
 render() {
     console.log("BookList: Render");
     console.log(this.state.books)
     
     return(
         <React.Fragment>
-        <section className="section-content">
-            <button type="button" className="btn"
-            onClick={() => {this.props.history.push("/books/new")}}>
-            Create book
-        </button>
-        </section>
+            <section className="section-content">
+                <button type="button" variant="primary" className="primary"
+                onClick={() => {this.props.history.push("/books/new")}}>
+                Create book
+                </button>
+            </section>
         <div className="container-cards">
         {this.state.books.map(book =>
             <BookCard 
             key={book.id} 
             book={book} 
             deleteBook={this.deleteBook}
+            bookSearch={this.bookSearch}
             {...this.props}
             />
             )}
