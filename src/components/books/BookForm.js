@@ -29,13 +29,13 @@ class BookForm extends Component {
             window.alert("At Least a Book Title and Author!!!");
         } else {
             this.setState({ loadingStatus: true });
-            const volume = {
+            const search = {
                 volume: this.state.title,
                 author: this.state.author,
     };
 
-    GoogleApiManager.get(volume)
-    .then(console.log("volume", volume))
+    GoogleApiManager.get(search.volume, search.author)
+    .then(console.log("volumeSearch", search))
 }
 };
 
