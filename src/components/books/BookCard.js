@@ -20,6 +20,8 @@ class BookCard extends Component {
                         <h3>ImageUrl</h3>
                         <h3>Rating: {this.props.book.rating}</h3>
                         <button type="button" onClick={() => this.props.deleteBook(this.props.book.id)}>Delete Book</button>
+                        {/* <input type="search">Search by Name or</input>  */}
+                        {/* <button type="button" onClick={() => this.props.searchBook(volume, author)}></button> */}
                         <button type="button" onClick={() => {this.props.history.push(`/books/${this.props.book.id}/edit`)}}>Edit</button>
                         <Link to={`/books/${this.props.book.id}`}><button>Book Detail View</button></Link>
                     </div>

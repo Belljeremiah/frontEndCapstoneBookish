@@ -37,27 +37,19 @@
   ],
   "books": [
     {
-      "id": 3,
-      "title": "test Title3",
-      "author": "test author3",
-      "genre": "test genre3",
-      "userId": 3,
-      "timesRead": 4,
-      "lastRead": "2019-05-05",
-      "borrowed": false,
-      "ownded": true,
-      "review": "test Review3",
-      "synopsis": "test synopsis3",
-      "imageUrl": "test Url3",
-      "bookShelfId": 1,
-      "rating": 3
-    },
-    {
+      "id": 5,
       "title": "meTitle",
       "author": "meAuthor",
-      "genre": "meGenre",
-      "rating": "meRating",
-      "id": 5
+      "genre": "jb",
+      "rating": "fiction",
+      "loadingStatus": false
+    },
+    {
+      "title": "mockup",
+      "author": "mockup",
+      "genre": "mockup",
+      "rating": "5",
+      "id": 6
     }
   ],
   "bookshelves": [
