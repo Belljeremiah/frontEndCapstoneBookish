@@ -120,12 +120,12 @@ console.log("Book Form Firing")
                     <div className="alignRight">
                         <button
                         type="button"
-                        disabled={this.state.loadingStatus}
+                        // disabled={this.state.loadingStatus}
                         onClick={this.constructNewBook}
                         >Submit</button>
                         <button
                         type="button"
-                        disabled={this.state.loadingStatus}
+                        // disabled={this.state.loadingStatus}
                         onClick={this.searchNewBook}
                         >Search</button>
                     </div>
