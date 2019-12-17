@@ -1,31 +1,10 @@
 {
   "users": [
     {
-      "id": 1,
-      "userName": "test1user",
-      "password": "password1",
-      "email": "test@email.com"
-    },
-    {
-      "username": "test5",
-      "email": "test5@email.com",
-      "password": "test5",
-      "confirmPassword": "test5",
-      "id": 2
-    },
-    {
-      "username": "test99",
-      "email": "test99@email.com",
-      "password": "test99",
-      "confirmPassword": "test99",
-      "id": 3
-    },
-    {
-      "username": "me",
-      "email": "me@email.com",
-      "password": "me",
-      "confirmPassword": "me",
-      "id": 4
+      "username": "guy",
+      "email": "guy@email.com",
+      "password": "guy",
+      "id": 1
     }
   ],
   "messages": [
@@ -42,22 +21,52 @@
       "author": "meAuthor",
       "genre": "jb",
       "rating": "fiction",
-      "loadingStatus": false
+      "loadingStatus": false,
+      "bookshelfId": 1
     },
     {
       "title": "mockup",
       "author": "mockup",
       "genre": "mockup",
       "rating": "5",
-      "id": 6
+      "id": 6,
+      "bookshelfId": 2
+    },
+    {
+      "title": "hobbit",
+      "author": "tolkien",
+      "genre": "Juvenile Fiction",
+      "rating": "4.5",
+      "id": 7,
+      "bookshelfId": 3
+    },
+    {
+      "title": "on the road",
+      "author": "kerouac",
+      "genre": "Fiction",
+      "rating": "3.5",
+      "id": 8,
+      "bookshelfId": 4
     }
   ],
   "bookshelves": [
     {
       "id": 1,
-      "shelfName": "test shelf",
+      "shelfName": "test shelf1",
       "userId": 1,
-      "genre": "test genre shelf"
+      "genre": "test genre shelf1"
+    },
+    {
+      "id": 2,
+      "shelfName": "test shelf2",
+      "userId": 1,
+      "genre": "test genre shelf2"
+    },
+    {
+      "id": 3,
+      "shelfName": "test shelf3",
+      "userId": 1,
+      "genre": "test genre shelf3"
     }
   ],
   "Friends": [

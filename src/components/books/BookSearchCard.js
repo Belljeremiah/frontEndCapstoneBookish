@@ -30,6 +30,7 @@ class BookSearchCard extends Component {
                         {this.props.item.volumeInfo.averageRating}
                         </span>
                         </h3>
+                        {/* Dropdown for each users shelves. To save on shelf and a button to submit card data without copy and paste*/}
 
                     </div>
                 </div>

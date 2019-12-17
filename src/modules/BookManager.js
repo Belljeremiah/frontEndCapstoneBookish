@@ -5,7 +5,8 @@ export default {
     return fetch(`${remoteURL}/books/${id}`).then(result => result.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/books`).then(result => result.json())
+    const userId = localStorage.getItem("credentials")
+    return fetch(`${remoteURL}/books?userId=${userId}`).then(result => result.json())
   },
   deleteBook(id) {
     return fetch(`http://localhost:5002/books/${id}`, {

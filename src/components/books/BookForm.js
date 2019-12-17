@@ -118,6 +118,9 @@ console.log("Book Form Firing")
                     
                     </div>
                     <div className="alignRight">
+                        <select>
+                            <option>To be Dropdown</option>
+                        </select>
                         <button
                         type="button"
                         // disabled={this.state.loadingStatus}

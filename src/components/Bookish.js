@@ -12,6 +12,7 @@ class Bookish extends Component {
 isRegistered = () => localStorage.getItem("credentials") !==null
 
 setUser = (registerObj) => {
+    localStorage.setItem("credentials", JSON.stringify(registerObj))
     this.setState({
         user: this.isRegistered()
     });

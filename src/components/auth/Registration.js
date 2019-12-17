@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import UsersManager from '../../modules/UsersManager'
 
 class Registration extends Component {
     state = {
@@ -18,22 +18,30 @@ class Registration extends Component {
     handleRegistrationSubmit = (e) => {
         e.preventDefault()
         if ( this.state.password === this.state.confirmPassword ) {
-            localStorage.setItem(
-                "credentials",
-                JSON.stringify({
-                    username: this.state.username,
-                    email: this.state.email,
-                    password: this.state.password,
-                    confirmPassowrd: this.state.confirmPassword
-                })
-            )
-            this.props.setUser({
-                username: this.state.username,
-                email: this.state.email,
-                password: this.state.password,
-                confirmPassword: this.state.confirmPassword
+            UsersManager.searchPrevUser(this.state.email)
+            .then((response) => {
+                if (response.length === 0) {
+                    this.setState({loadingStatus:true})
+                    const userIdObject = {
+                        username: this.state.username,
+                        email: this.state.email,
+                        password: this.state.password,
+                        
+                    }
+                    
+                    UsersManager.post(userIdObject)
+                    .then((newUser) => {
+                        UsersManager.searchPrevUser(this.state.email)
+                        .then((response) => {
+                            this.props.setUser(response[0])
+                            this.props.history.push("/");
+                        })
+
+                    })
+                } else { window.alert("You already have an account Go to Sign in HOmunculous!")
+
+                }
             })
-    this.props.history.push("/");
         } else {
             window.alert("Hey match your fields, don't cross your streams!")
         }
