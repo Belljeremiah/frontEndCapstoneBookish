@@ -22,7 +22,8 @@
       "genre": "jb",
       "rating": "fiction",
       "loadingStatus": false,
-      "bookshelfId": 1
+      "bookshelfId": 1,
+      "userId": 1
     },
     {
       "title": "mockup",
@@ -30,7 +31,8 @@
       "genre": "mockup",
       "rating": "5",
       "id": 6,
-      "bookshelfId": 2
+      "bookshelfId": 2,
+      "userId": 2
     },
     {
       "title": "hobbit",
@@ -38,7 +40,8 @@
       "genre": "Juvenile Fiction",
       "rating": "4.5",
       "id": 7,
-      "bookshelfId": 3
+      "bookshelfId": 3,
+      "userId": 3
     },
     {
       "title": "on the road",
@@ -46,7 +49,35 @@
       "genre": "Fiction",
       "rating": "3.5",
       "id": 8,
-      "bookshelfId": 4
+      "bookshelfId": 4,
+      "userId": 4
+    },
+    {
+      "title": "newbooktest1",
+      "author": "newauthortest1",
+      "genre": "newgenretest1",
+      "rating": "newratingtest1",
+      "userId": 1,
+      "bookshelfId": 1,
+      "id": 9
+    },
+    {
+      "title": "book2",
+      "author": "author2",
+      "genre": "genre2",
+      "rating": "rating2",
+      "userId": 1,
+      "bookshelfId": 2,
+      "id": 10
+    },
+    {
+      "title": "hobbit",
+      "author": "tolkien",
+      "genre": "FICTION",
+      "rating": "4",
+      "userId": 1,
+      "bookshelfId": 0,
+      "id": 11
     }
   ],
   "bookshelves": [

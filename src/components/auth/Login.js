@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import UsersManager from "../../modules/UsersManager"
 
 class Login extends Component {
 
@@ -9,26 +10,37 @@ class Login extends Component {
   }
 
   // Update state whenever an input field is edited
-  handleFieldChange = (evt) => {
+  handleFieldChange = (e) => {
     const stateToChange = {}
-    stateToChange[evt.target.id] = evt.target.value
+    stateToChange[e.target.id] = e.target.value
     this.setState(stateToChange)
   }
 
   handleLogin = (e) => {
     e.preventDefault()
+    if ( this.state.password !== "" || this.state.email !== "") {
+      UsersManager.searchPrevUser(this.state.email)
+      .then((userObj) => {
+        if (userObj.length === 0) {
+          window.alert("YOu no have account boi/goi go to REgister!! NAWOOOW") 
+        } else {
+          if (this.state.password === userObj[0].password) {
+
+            this.props.setUser(userObj[0])
+            this.props.history.push("/")
+          } else {
+            window.alert("NO DICE your passwords BULLSHIT!")
+          }
+          
+        }
+      }
+      )
+    }
     /*
         For now, just store the email and password that
         the customer enters into local storage.
     */
-    localStorage.setItem(
-        "credentials",
-        JSON.stringify({
-            email: this.state.email,
-            password: this.state.password
-        })
-    )
-    this.props.history.push("/");
+
 
   }
 

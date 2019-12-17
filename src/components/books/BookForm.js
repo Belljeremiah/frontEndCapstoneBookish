@@ -11,6 +11,8 @@ class BookForm extends Component {
         rating: "",
         loadingStatus: false,
         items:{items:[]},
+        bookshelf:[],
+        selector: ""
     };
 
     handleFieldChange = e => {
@@ -59,11 +61,15 @@ class BookForm extends Component {
             window.alert("At Least a Book Title and Author!!!");
         } else {
             this.setState({ loadingStatus: true });
+            // This Id is how to get a unique Id on each item created.
+            const userId = JSON.parse(localStorage.getItem("credentials"));
             const book = {
                 title: this.state.title,
                 author: this.state.author,
                 genre: this.state.genre,
                 rating: this.state.rating,
+                userId: userId.id,
+                bookshelfId: Number(this.state.selector)
             };
 
             // Where the user makes a book and goes to book list
@@ -71,6 +77,15 @@ class BookForm extends Component {
             .then(() => this.props.history.push("/books"));
         }
     };
+
+    componentDidMount(){
+        console.log("BookForm ComponentDidMOunt")
+        BookManager.getAllBookShelves()
+        .then((response) => {this.setState({
+            bookshelf: response
+        })
+    })
+    }
 
     render(){
 console.log(this.state.author)
@@ -118,9 +133,13 @@ console.log("Book Form Firing")
                     
                     </div>
                     <div className="alignRight">
-                        <select>
-                            <option>To be Dropdown</option>
+                        <select onChange={this.handleFieldChange} id="selector">
+                        <option>To be Dropdown</option>
+                        {this.state.bookshelf.map((singleShelf) => {
+                        return <option key={singleShelf.id} value={singleShelf.id}>{singleShelf.shelfName}</option>
+                        })}
                         </select>
+                        
                         <button
                         type="button"
                         // disabled={this.state.loadingStatus}

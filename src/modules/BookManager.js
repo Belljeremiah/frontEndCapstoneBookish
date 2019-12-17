@@ -5,8 +5,8 @@ export default {
     return fetch(`${remoteURL}/books/${id}`).then(result => result.json())
   },
   getAll() {
-    const userId = localStorage.getItem("credentials")
-    return fetch(`${remoteURL}/books?userId=${userId}`).then(result => result.json())
+    const userId = JSON.parse(localStorage.getItem("credentials"))
+    return fetch(`${remoteURL}/books?userId=${userId.id}`).then(result => result.json())
   },
   deleteBook(id) {
     return fetch(`http://localhost:5002/books/${id}`, {
@@ -31,5 +31,9 @@ export default {
       },
       body: JSON.stringify(editedBook)
     }).then(data => data.json());
+  },
+  getAllBookShelves() {
+    const userId = JSON.parse(localStorage.getItem("credentials"))
+    return fetch(`${remoteURL}/bookshelves?userId=${userId.id}`).then(result => result.json())
   }
 }
