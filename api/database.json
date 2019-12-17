@@ -37,11 +37,12 @@
   ],
   "books": [
     {
+      "id": 5,
       "title": "meTitle",
       "author": "meAuthor",
-      "genre": "meGenre",
-      "rating": "meRating",
-      "id": 5
+      "genre": "jb",
+      "rating": "fiction",
+      "loadingStatus": false
     },
     {
       "title": "mockup",

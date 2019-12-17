@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BookManager from '../../modules/BookManager';
 import GoogleApiManager from '../../modules/GoogleApiManager';
-
+import BookSearchCard from '../books/BookSearchCard';
 
 class BookForm extends Component {
     state = {
@@ -10,6 +10,7 @@ class BookForm extends Component {
         genre: "",
         rating: "",
         loadingStatus: false,
+        items:{items:[]},
     };
 
     handleFieldChange = e => {
@@ -41,7 +42,10 @@ class BookForm extends Component {
         this.setState({
             items: result
         })
-        console.log(this.state.items.items[0].volumeInfo.title)
+        console.log(this.state.items)
+        console.log(this.state.items.items.map((item) => {
+            console.log(item)
+        }))
     })
     
     
@@ -127,7 +131,21 @@ console.log("Book Form Firing")
                     </div>
                 </fieldset>
             </form>
-        </>
+            <div>
+                {
+                  this.state.items.items.map((item, index) => {
+                    if (index < 5) {
+                        return <BookSearchCard
+                            key={item.id}
+                            item={item}
+                            {...this.props}
+                            />
+                            
+                    }
+                  })
+                }
+                </div>
+            </>
         )
     }
 }
