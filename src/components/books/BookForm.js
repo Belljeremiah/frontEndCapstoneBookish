@@ -37,13 +37,16 @@ class BookForm extends Component {
 
     GoogleApiManager.get(search.volume, search.author)
     .then(result => {
-        console.log("fetch result", result.items)
+        // console.log("fetch result", result.items)
+        this.setState({
+            items: result
+        })
+        console.log(this.state.items.items[0].volumeInfo.title)
     })
     
     
 }
 };
-
     /*  Local method for validation, set loadingStatus, create book, object, invoke the bookManager post method, and redirect to the full book list
     */
     constructNewBook = e => {
