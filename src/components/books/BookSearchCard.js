@@ -4,25 +4,32 @@ import React, { Component } from 'react';
 class BookSearchCard extends Component {
   
     render() {
-        console.log(this.props.item.volumeInfo.title)
+        console.log(this.props.item.volumeInfo)
         return(
             <>
                 <div className="card">
                     <div className="card-content">
                         <h1>Book Title: <span className="book-title">
                         {this.props.item.volumeInfo.title}</span></h1>
-                        {/* <h3>Book Author:
-                        {this.props.item}
+                        {/* IF you want single author vs multi authors must refactor at .authors.map and add in [] for single object from the array */}
+                        <h3>Book Authors:{
+                            this.props.item.volumeInfo.authors.map((singleAuthor) => {
+                                return(singleAuthor)
+                            })}
                         </h3>
-                        <h3>Book Genre: 
-                        {this.props.item}
+                        <h3>Book Genre: {
+                        this.props.item.volumeInfo.categories.map((singleCategory) => {
+                            return(singleCategory)
+                        })
+                        }
                         </h3>
                         <h3>ImageUrl:
-                        {this.props.item}
+                        {this.props.item.volumeInfo.imageLinks.smallThumbnail}
                         </h3>
-                        <h3>Rating:
-                        {this.props.item}
-                        </h3> */}
+                        <h3>Rating: <span className="book-rating">
+                        {this.props.item.volumeInfo.averageRating}
+                        </span>
+                        </h3>
 
                     </div>
                 </div>
