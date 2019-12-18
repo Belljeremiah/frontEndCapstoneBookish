@@ -35,5 +35,20 @@ export default {
   getAllBookShelves() {
     const userId = JSON.parse(localStorage.getItem("credentials"))
     return fetch(`${remoteURL}/bookshelves?userId=${userId.id}`).then(result => result.json())
-  }
+  },
+  deleteShelf(id) {
+    return fetch(`${remoteURL}/bookshelves/${id}`, {
+        method: "DELETE"
+    })
+    .then(result => result.json())
+  },
+  updateShelf(editedShelf) {
+    return fetch(`${remoteURL}/books/${editedShelf.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedShelf)
+    }).then(data => data.json());
+  },
 }

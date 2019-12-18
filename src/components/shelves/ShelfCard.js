@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Jumbotron } from 'react-bootstrap';
 
 class ShelfCard extends Component {
     render () {
         console.log("Shelf Card Rendered")
         return (
             <>
+            <Jumbotron>
                 <div className="card">
                     <div className="card-content">
-                        <h1>Shelf Name:</h1>
-                        <h3>Shelf Genre:</h3>
+                        <p>Shelf Name:</p>
+                        <p>Shelf Genre:</p>
                     </div>
                 </div>
+            </Jumbotron>
             </>
         )
     }

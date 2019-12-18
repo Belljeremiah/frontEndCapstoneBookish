@@ -8,6 +8,7 @@ import BookList from './books/BookList'
 import BookDetail from './books/BookDetail'
 import BookEditForm from './books/BookEditForm'
 import BookSearchForm from './books/BookSearchForm'
+import ShelfCard from '../components/shelves/ShelfCard'
 // Above is where I import my components, including the ability to extend Component from React in the form of Class Names.
 
 
@@ -48,9 +49,9 @@ class ApplicationViews extends Component {
                 }} />
                 
 
-                {/* <Route exact path="/shelves" render={(props) => {
-                    return <Shelves />
-                }} /> */}
+                <Route exact path="/shelves" render={(props) => {
+                    return <ShelfCard />
+                }} />
 
                 <Route exact path="/registration" render={(props) => {
                     return <Registration setUser={this.props.setUser} {...props} />

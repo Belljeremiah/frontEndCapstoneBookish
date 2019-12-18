@@ -85,6 +85,35 @@
       "rating": "4",
       "loadingStatus": false,
       "userId": 2
+    },
+    {
+      "title": "The Hobbit, Or, There and Back Again",
+      "author": "John Ronald Reuel Tolkien",
+      "genre": "FICTION",
+      "rating": 4,
+      "imageUrl": "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "userId": 2,
+      "bookshelfId": 0,
+      "id": 16
+    },
+    {
+      "title": "jeremiahjournal",
+      "author": "jeremiah",
+      "genre": "fiction",
+      "rating": "4",
+      "userId": 2,
+      "bookshelfId": 0,
+      "id": 17
+    },
+    {
+      "title": "The Hobbit, Or, There and Back Again",
+      "author": "John Ronald Reuel Tolkien",
+      "genre": "FICTION",
+      "rating": 4,
+      "imageUrl": "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "userId": 2,
+      "bookshelfId": 0,
+      "id": 18
     }
   ],
   "bookshelves": [

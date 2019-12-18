@@ -9,6 +9,7 @@ class BookDetail extends Component {
       author: "",
       genre: "",
       rating: "",
+      imageUrl: "",
       loadingStatus: true
   }
 
@@ -24,6 +25,7 @@ class BookDetail extends Component {
         author: book.author,
         genre: book.genre,
         rating: book.rating,
+        imageUrl: book.imageUrl,
         loadingStatus: false
       });
     });
@@ -44,7 +46,7 @@ class BookDetail extends Component {
             <h1>Book Title: <span className="book-title">{this.state.title}</span></h1>
                 <h3>Book Author: {this.state.author}</h3>
                 <h3>Book Genre: {this.state.genre}</h3>
-                <h3>ImageUrl</h3>
+                <h3>ImageUrl: {this.state.imageUrl}</h3>
                 <h3>Rating: {this.state.rating}</h3>
             <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete Book</button>
         </div>

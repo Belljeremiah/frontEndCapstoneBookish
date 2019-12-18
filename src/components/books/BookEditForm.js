@@ -55,6 +55,7 @@ class BookEditForm extends Component {
         <form>
           <fieldset>
             <div className="formgrid">
+              
               <input
                 type="text"
                 required
