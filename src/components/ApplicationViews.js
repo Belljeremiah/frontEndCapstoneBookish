@@ -7,6 +7,7 @@ import BookForm from './books/BookForm'
 import BookList from './books/BookList'
 import BookDetail from './books/BookDetail'
 import BookEditForm from './books/BookEditForm'
+import BookSearchForm from './books/BookSearchForm'
 // Above is where I import my components, including the ability to extend Component from React in the form of Class Names.
 
 
@@ -41,6 +42,11 @@ class ApplicationViews extends Component {
                 <Route path="/books/new" render={(props) => {
                 return <BookForm {...props} />
                 }} />
+
+                <Route path="/books/search" render={(props) => {
+                return <BookSearchForm {...props} />
+                }} />
+                
 
                 {/* <Route exact path="/shelves" render={(props) => {
                     return <Shelves />

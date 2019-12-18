@@ -45,6 +45,10 @@ render() {
                 onClick={() => {this.props.history.push("/books/new")}}>
                 Create book
                 </button>
+                <button type="button" variant="primary" className="primary"
+                onClick={() => {this.props.history.push("/books/search")}}>
+                Search Google Books
+                </button>
             </section>
         <div className="container-cards">
         {this.state.books.map(book =>

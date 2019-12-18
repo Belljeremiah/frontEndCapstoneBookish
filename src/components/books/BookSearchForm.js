@@ -3,7 +3,7 @@ import BookManager from '../../modules/BookManager';
 import GoogleApiManager from '../../modules/GoogleApiManager';
 import BookSearchCard from '../books/BookSearchCard';
 
-class BookForm extends Component {
+class BookSearchForm extends Component {
     state = {
         title: "",
         author: "",
@@ -36,6 +36,7 @@ class BookForm extends Component {
             const search = {
                 volume: this.state.title,
                 author: this.state.author,
+                genre: this.state.genre,
     };
 
     GoogleApiManager.get(search.volume, search.author)
@@ -53,33 +54,10 @@ class BookForm extends Component {
     
 }
 };
-    /*  Local method for validation, set loadingStatus, create book, object, invoke the bookManager post method, and redirect to the full book list
-    */
-    constructNewBook = e => {
-        e.preventDefault();
-        if (this.state.title === "" || this.state.author === "" || this.state.genre === "" ) {
-            window.alert("At Least a Book Title and Author!!!");
-        } else {
-            this.setState({ loadingStatus: true });
-            // This Id is how to get a unique Id on each item created.
-            const userId = JSON.parse(localStorage.getItem("credentials"));
-            const book = {
-                title: this.state.title,
-                author: this.state.author,
-                genre: this.state.genre,
-                rating: this.state.rating,
-                userId: userId.id,
-                bookshelfId: Number(this.state.selector)
-            };
 
-            // Where the user makes a book and goes to book list
-            BookManager.post(book)
-            .then(() => this.props.history.push("/books"));
-        }
-    };
 
     componentDidMount(){
-        console.log("BookForm ComponentDidMOunt")
+        console.log("BookSearchForm ComponentDidMOunt")
         BookManager.getAllBookShelves()
         .then((response) => {this.setState({
             bookshelf: response
@@ -133,18 +111,11 @@ console.log("Book Form Firing")
                     
                     </div>
                     <div className="alignRight">
-                        <select onChange={this.handleFieldChange} id="selector">
-                        <option>To be Dropdown</option>
-                        {this.state.bookshelf.map((singleShelf) => {
-                        return <option key={singleShelf.id} value={singleShelf.id}>{singleShelf.shelfName}</option>
-                        })}
-                        </select>
-                        
                         <button
                         type="button"
                         // disabled={this.state.loadingStatus}
-                        onClick={this.constructNewBook}
-                        >Submit</button>
+                        onClick={this.searchNewBook}
+                        >Search</button>
                     </div>
                 </fieldset>
             </form>
@@ -155,7 +126,7 @@ console.log("Book Form Firing")
                         return <BookSearchCard
                             key={item.id}
                             item={item}
-                            constructNewBook={this.constructNewBook}
+                            bookshelf={this.state.bookshelf}
                             {...this.props}
                             />
                             
@@ -168,4 +139,4 @@ console.log("Book Form Firing")
     }
 }
 
-export default BookForm;
+export default BookSearchForm;

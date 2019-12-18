@@ -78,6 +78,34 @@
       "userId": 1,
       "bookshelfId": 0,
       "id": 11
+    },
+    {
+      "title": "hobbit",
+      "author": "tolkien",
+      "genre": "FICTION",
+      "rating": "4",
+      "userId": 1,
+      "bookshelfId": 2,
+      "id": 12
+    },
+    {
+      "title": "The Hobbit, Or, There and Back Again",
+      "author": "John Ronald Reuel Tolkien",
+      "genre": "FICTION",
+      "rating": 4,
+      "imageUrl": "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "userId": 1,
+      "bookshelfId": 2,
+      "id": 13
+    },
+    {
+      "id": 14,
+      "title": "codex alera",
+      "author": "butcher",
+      "genre": "space western",
+      "rating": "5",
+      "loadingStatus": false,
+      "userId": 1
     }
   ],
   "bookshelves": [
