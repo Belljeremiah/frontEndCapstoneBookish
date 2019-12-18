@@ -21,11 +21,6 @@ class BookSearchForm extends Component {
         this.setState(stateToChange);
     };
 
-    // bookSearch = (volume, author) => {
-    // GoogleApiManager.getAll(volume, author)
-    // .then(result => result.json)
-    // .then(console.log(result))
-    // }
     searchNewBook = e => {
         e.preventDefault();
         if (this.state.title === "" || this.state.author === "") {
@@ -120,8 +115,7 @@ console.log("Book Form Firing")
                 </fieldset>
             </form>
             <div>
-                {
-                  this.state.items.items.map((item, index) => {
+                {this.state.items.items.map((item, index) => {
                     if (index < 5) {
                         return <BookSearchCard
                             key={item.id}

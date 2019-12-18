@@ -17,7 +17,7 @@ class BookCard extends Component {
                         <h1>Book Title: <span className="book-title">{this.props.book.title}</span></h1>
                         <h3>Book Author: {this.props.book.author}</h3>
                         <h3>Book Genre: {this.props.book.genre}</h3>
-                        <h3>ImageUrl</h3>
+                        <h3>ImageUrl: {this.props.book.imageUrl}</h3>
                         <h3>Rating: {this.props.book.rating}</h3>
                         <button type="button" onClick={() => this.props.deleteBook(this.props.book.id)}>Delete Book</button>
                         <button type="button" onClick={() => {this.props.history.push(`/books/${this.props.book.id}/edit`)}}>Edit</button>

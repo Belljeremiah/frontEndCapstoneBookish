@@ -46,15 +46,14 @@ class BookForm extends Component {
         })
         console.log(this.state.items)
         console.log(this.state.items.items.map((item) => {
-            console.log(item)
+        console.log(item)
         }))
     })
     
     
 }
 };
-    /*  Local method for validation, set loadingStatus, create book, object, invoke the bookManager post method, and redirect to the full book list
-    */
+    
     constructNewBook = e => {
         e.preventDefault();
         if (this.state.title === "" || this.state.author === "" || this.state.genre === "" ) {
@@ -131,8 +130,8 @@ console.log("Book Form Firing")
                         />
                         <label htmlFor="rating">Rating</label>
                     
-                    </div>
-                    <div className="alignRight">
+                        </div>
+                        <div className="alignRight">
                         <select onChange={this.handleFieldChange} id="selector">
                         <option>To be Dropdown</option>
                         {this.state.bookshelf.map((singleShelf) => {

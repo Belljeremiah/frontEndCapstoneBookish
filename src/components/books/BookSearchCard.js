@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BookManager from '../../modules/BookManager';
-import GoogleApiManager from '../../modules/GoogleApiManager'; 
 // THis card is for feeding into bookForm so I can display my data there from my API Google Fetch Calls.
 
 class BookSearchCard extends Component {
@@ -16,35 +15,6 @@ class BookSearchCard extends Component {
         this.setState(stateToChange);
     };
 
-//     searchNewBook = e => {
-//         e.preventDefault();
-//         if (this.state.title === "" || this.state.author === "") {
-//             window.alert("At Least a Book Title and Author!!!");
-//         } else {
-//             this.setState({ loadingStatus: true });
-//             // console.log("state", this.state)
-//             const search = {
-//                 volume: this.state.title,
-//                 author: this.state.author,
-//     };
-
-//     GoogleApiManager.get(search.volume, search.author)
-//     .then(result => {
-//         // console.log("fetch result", result.items)
-//         this.setState({
-//             items: result
-//         })
-//         console.log(this.state.items)
-//         console.log(this.state.items.items.map((item) => {
-//             console.log(item)
-//         }))
-//     })
-    
-    
-// }
-// };
-//     /*  Local method for validation, set loadingStatus, create book, object, invoke the bookManager post method, and redirect to the full book list
-//     */
     constructNewBook = e => {
         e.preventDefault();
             this.setState({ loadingStatus: true });
@@ -67,18 +37,7 @@ class BookSearchCard extends Component {
             BookManager.post(book)
             .then(() => this.props.history.push("/books"));
         }
-    
-    
-//     componentDidMount(){
-//         console.log("BookForm ComponentDidMOunt")
-//         BookManager.getAllBookShelves()
-//         .then((response) => {this.setState({
-//             bookshelf: response
-//         })
-//     })
-//     }
-    
-    
+
     render() {
         console.log(this.props.item.volumeInfo)
         return(

@@ -11,6 +11,12 @@
       "email": "matt@email.com",
       "password": "matt",
       "id": 2
+    },
+    {
+      "username": "me",
+      "email": "me@email.com",
+      "password": "me",
+      "id": 3
     }
   ],
   "messages": [
@@ -50,15 +56,6 @@
       "userId": 1
     },
     {
-      "id": 15,
-      "title": "matts book",
-      "author": "matt bell",
-      "genre": "non fiction",
-      "rating": "4",
-      "loadingStatus": false,
-      "userId": 2
-    },
-    {
       "title": "testertest",
       "author": "matt",
       "genre": "non fiction fick",
@@ -95,6 +92,12 @@
       "genre": "fiction",
       "userId": 2,
       "id": 4
+    },
+    {
+      "shelfName": "shelf1",
+      "genre": "shelf1",
+      "userId": 3,
+      "id": 5
     }
   ],
   "Friends": [
