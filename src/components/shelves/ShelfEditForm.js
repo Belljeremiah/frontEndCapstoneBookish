@@ -27,11 +27,11 @@ class ShelfEditForm extends Component {
         };
 
         BookManager.updateShelf(editedShelf)
-        .then(() => this.props.history.push("/shelves"))
+        .then(() => this.props.history.push("/bookshelves"))
     }
 
     componentDidMount() {
-        BookManager.get(this.props.match.params.shelfId)
+        BookManager.getAllBookShelves(this.props.match.params.shelfId)
         .then(shelf => {
             this.setState({
                 shelfName: shelf.shelfName,
@@ -42,19 +42,19 @@ class ShelfEditForm extends Component {
     }
 
     render() {
+        console.log(this.state)
         return (
             <React.Fragment>
             <form>
                 <fieldset>
                     <div className="formgrid">
-                    
                     <input
                     type="text"
                     required
                     className="form-control"
                     onChange={this.handleFieldChange}
                     id="shelfName"
-                    value={this.state.shelfName}
+                    value={this.state.shelfName || ""}
                     />
                     <label htmlFor="shelfName">Shelf Name</label>
 
@@ -64,14 +64,14 @@ class ShelfEditForm extends Component {
                     className="form-control"
                     onChange={this.handleFieldChange}
                     id="genre"
-                    value={this.state.genre}
+                    value={this.state.genre || ""}
                     />
                     <label htmlFor="genre">Genre of Shelf</label>
 
                     <div className="alignRight">
                     <button
                     type="button" disabled={this.state.loadingStatus}
-                    onClick={this.updateExistingBook}
+                    onClick={this.updateExistingShelf}
                     className="btn btn-primary"
                     >Save</button>
                     </div>

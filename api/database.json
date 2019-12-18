@@ -41,34 +41,6 @@
       "id": 9
     },
     {
-      "title": "book2",
-      "author": "author2",
-      "genre": "genre2",
-      "rating": "rating2",
-      "userId": 1,
-      "bookshelfId": 2,
-      "id": 10
-    },
-    {
-      "title": "hobbit",
-      "author": "tolkien",
-      "genre": "FICTION",
-      "rating": "4",
-      "userId": 1,
-      "bookshelfId": 2,
-      "id": 12
-    },
-    {
-      "title": "The Hobbit, Or, There and Back Again",
-      "author": "John Ronald Reuel Tolkien",
-      "genre": "FICTION",
-      "rating": 4,
-      "imageUrl": "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "userId": 1,
-      "bookshelfId": 2,
-      "id": 13
-    },
-    {
       "id": 14,
       "title": "codex alera",
       "author": "butcher",
@@ -94,6 +66,15 @@
       "userId": 2,
       "bookshelfId": 3,
       "id": 16
+    },
+    {
+      "title": "light in august",
+      "author": "Faulkner",
+      "genre": "fiction",
+      "rating": "8",
+      "userId": 2,
+      "bookshelfId": 4,
+      "id": 17
     }
   ],
   "bookshelves": [
@@ -104,16 +85,16 @@
       "genre": "test genre shelf1"
     },
     {
-      "id": 2,
-      "shelfName": "test shelf2",
-      "userId": 2,
-      "genre": "test genre shelf2"
-    },
-    {
       "shelfName": "help",
       "genre": "help",
       "userId": 2,
       "id": 3
+    },
+    {
+      "shelfName": "jisie shelf",
+      "genre": "fiction",
+      "userId": 2,
+      "id": 4
     }
   ],
   "Friends": [

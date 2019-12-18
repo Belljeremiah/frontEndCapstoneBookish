@@ -43,7 +43,7 @@ export default {
     .then(result => result.json())
   },
   updateShelf(editedShelf) {
-    return fetch(`${remoteURL}/books/${editedShelf.id}`, {
+    return fetch(`${remoteURL}/bookshelves/${editedShelf.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
