@@ -7,6 +7,11 @@ import BookForm from './books/BookForm'
 import BookList from './books/BookList'
 import BookDetail from './books/BookDetail'
 import BookEditForm from './books/BookEditForm'
+import BookSearchForm from './books/BookSearchForm'
+import ShelfForm from '../components/shelves/ShelfForm'
+import ShelfList from '../components/shelves/ShelfList'
+import ShelfDetail from '../components/shelves/ShelfDetail'
+import ShelfEditForm from '../components/shelves/ShelfEditForm'
 // Above is where I import my components, including the ability to extend Component from React in the form of Class Names.
 
 
@@ -42,9 +47,31 @@ class ApplicationViews extends Component {
                 return <BookForm {...props} />
                 }} />
 
-                {/* <Route exact path="/shelves" render={(props) => {
-                    return <Shelves />
-                }} /> */}
+                <Route path="/books/search" render={(props) => {
+                return <BookSearchForm {...props} />
+                }} />
+                
+
+                <Route exact path="/bookshelves" render={(props) => {
+                    return <ShelfList {...props}/>
+                }} />
+
+                <Route exact path="/bookshelves/:shelfId(\d+)" render={(props) => {
+                return <ShelfDetail shelfId={parseInt(props.match.params.shelfId)} 
+                // THis is a spread operator that seperates out all the key values in the object and sets them all as props. Includes History and match we want history for history.push router property.
+                {...props}
+                />
+                }} />
+
+                <Route
+                path="/bookshelves/:shelfId(\d+)/edit" render={props => {
+                return <ShelfEditForm {...props} />
+                }}
+                />
+
+                <Route path="/bookshelves/new" render={(props) => {
+                return <ShelfForm {...props} />
+                }} />
 
                 <Route exact path="/registration" render={(props) => {
                     return <Registration setUser={this.props.setUser} {...props} />

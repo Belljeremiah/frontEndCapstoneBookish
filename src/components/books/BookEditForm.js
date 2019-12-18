@@ -21,6 +21,7 @@ class BookEditForm extends Component {
     updateExistingBook = e => {
       e.preventDefault()
       this.setState({ loadingStatus: true });
+      const userId = JSON.parse(localStorage.getItem("credentials"));
       const editedBook = {
         id: this.props.match.params.bookId,
         title: this.state.title,
@@ -28,6 +29,7 @@ class BookEditForm extends Component {
         genre: this.state.genre,
         rating: this.state.rating,
         loadingStatus: false,
+        userId: userId.id
       };
 
       BookManager.update(editedBook)
@@ -53,6 +55,7 @@ class BookEditForm extends Component {
         <form>
           <fieldset>
             <div className="formgrid">
+              
               <input
                 type="text"
                 required

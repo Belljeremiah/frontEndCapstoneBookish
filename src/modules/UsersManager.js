@@ -12,5 +12,8 @@ export default {
           },
           body: JSON.stringify(newUser)
         }).then(data =>data.json())
+},
+    searchPrevUser(email) {
+        return fetch(`${baseURL}/users?q=${email}`).then(result=> result.json())
 }
 }

@@ -5,7 +5,8 @@ export default {
     return fetch(`${remoteURL}/books/${id}`).then(result => result.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/books`).then(result => result.json())
+    const userId = JSON.parse(localStorage.getItem("credentials"))
+    return fetch(`${remoteURL}/books?userId=${userId.id}`).then(result => result.json())
   },
   deleteBook(id) {
     return fetch(`http://localhost:5002/books/${id}`, {
@@ -30,5 +31,36 @@ export default {
       },
       body: JSON.stringify(editedBook)
     }).then(data => data.json());
-  }
+  },
+  getAllBookShelves() {
+    const userId = JSON.parse(localStorage.getItem("credentials"))
+    return fetch(`${remoteURL}/bookshelves?userId=${userId.id}`).then(result => result.json())
+  },
+  deleteShelf(id) {
+    return fetch(`${remoteURL}/bookshelves/${id}`, {
+        method: "DELETE"
+    })
+    .then(result => result.json())
+  },
+  updateShelf(editedShelf) {
+    return fetch(`${remoteURL}/bookshelves/${editedShelf.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedShelf)
+    }).then(data => data.json());
+  },
+  postNewShelf(newShelf) {
+    return fetch(`${remoteURL}/bookshelves`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newShelf)
+    }).then(data =>data.json())
+  },
+  getShelf(id) {
+    return fetch(`${remoteURL}/bookshelves/${id}`).then(result => result.json())
+  },
 }
