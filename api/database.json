@@ -5,6 +5,12 @@
       "email": "guy@email.com",
       "password": "guy",
       "id": 1
+    },
+    {
+      "username": "matt",
+      "email": "matt@email.com",
+      "password": "matt",
+      "id": 2
     }
   ],
   "messages": [
@@ -26,33 +32,6 @@
       "userId": 1
     },
     {
-      "title": "mockup",
-      "author": "mockup",
-      "genre": "mockup",
-      "rating": "5",
-      "id": 6,
-      "bookshelfId": 2,
-      "userId": 2
-    },
-    {
-      "title": "hobbit",
-      "author": "tolkien",
-      "genre": "Juvenile Fiction",
-      "rating": "4.5",
-      "id": 7,
-      "bookshelfId": 3,
-      "userId": 3
-    },
-    {
-      "title": "on the road",
-      "author": "kerouac",
-      "genre": "Fiction",
-      "rating": "3.5",
-      "id": 8,
-      "bookshelfId": 4,
-      "userId": 4
-    },
-    {
       "title": "newbooktest1",
       "author": "newauthortest1",
       "genre": "newgenretest1",
@@ -69,15 +48,6 @@
       "userId": 1,
       "bookshelfId": 2,
       "id": 10
-    },
-    {
-      "title": "hobbit",
-      "author": "tolkien",
-      "genre": "FICTION",
-      "rating": "4",
-      "userId": 1,
-      "bookshelfId": 0,
-      "id": 11
     },
     {
       "title": "hobbit",
@@ -106,6 +76,15 @@
       "rating": "5",
       "loadingStatus": false,
       "userId": 1
+    },
+    {
+      "id": 15,
+      "title": "matts book",
+      "author": "matt bell",
+      "genre": "non fiction",
+      "rating": "4",
+      "loadingStatus": false,
+      "userId": 2
     }
   ],
   "bookshelves": [
