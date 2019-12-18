@@ -3,7 +3,7 @@ import BookManager from '../../modules/BookManager';
 
 // Declaring a class/object with the ability to use Component Methods from React
 class BookDetail extends Component {
-// Setting State which is the state of the app in its current use. So this is setting state for BookDetail the class I declared earlier so when I need to set Props for the Animal Card I can do that here.
+// Setting State which is the state of the app in its current use. So this is setting state for BookDetail the class I declared earlier so when I need to set Props for the BookCard I can do that here.
   state = {
       title: "",
       author: "",
@@ -13,7 +13,7 @@ class BookDetail extends Component {
       loadingStatus: true
   }
 
-  // This is a method that runs to load data from a remote endpoin in the json. in this case book/id then I set the state to have Book/title Book/breed from json server as well. This also allows for another render to occur and makes for a double invocation fo Render which can lead to errors later on but is used for the exercise instead of constructor()
+  // This is a method that runs to load data from a remote endpoint in the json. in this case book/id then I set the state to have the same keys and value pairs from json server as well.
   componentDidMount(){
     console.log("BookDetail: ComponentDidMount");
     //get(id) from BookManager and hang on to the data; put it into state

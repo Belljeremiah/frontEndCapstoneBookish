@@ -51,4 +51,16 @@ export default {
       body: JSON.stringify(editedShelf)
     }).then(data => data.json());
   },
+  postNewShelf(newShelf) {
+    return fetch(`${remoteURL}/bookshelves`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newShelf)
+    }).then(data =>data.json())
+  },
+  getShelf(id) {
+    return fetch(`${remoteURL}/bookshelves/${id}`).then(result => result.json())
+  },
 }

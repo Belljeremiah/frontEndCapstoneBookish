@@ -10,8 +10,8 @@ class ShelfCard extends Component {
             <Jumbotron>
                 <div className="card">
                     <div className="card-content">
-                        <p>Shelf Name:</p>
-                        <p>Shelf Genre:</p>
+                    <p>Shelf Name: {this.props.shelf.shelfName}</p>
+                    <p>Shelf Genre: {this.props.shelf.genre}</p>
                     </div>
                 </div>
             </Jumbotron>
