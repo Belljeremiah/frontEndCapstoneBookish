@@ -121,10 +121,11 @@
       "userId": 5
     },
     {
+      "id": 7,
       "shelfName": "mvptest",
-      "genre": "mvptest",
-      "userId": 3,
-      "id": 7
+      "genre": "mvptest2",
+      "loadingStatus": false,
+      "userId": 3
     }
   ],
   "Friends": [
