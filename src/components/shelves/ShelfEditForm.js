@@ -31,18 +31,19 @@ class ShelfEditForm extends Component {
     }
 
     componentDidMount() {
-        BookManager.getAllBookShelves(this.props.match.params.shelfId)
+        BookManager.getAllBookShelves(Number(this.props.match.params.shelfId))
         .then(shelf => {
+            console.log("shelf", shelf)
             this.setState({
-                shelfName: shelf.shelfName,
-                genre: shelf.genre,
+                shelfName: shelf[0].shelfName,
+                genre: shelf[0].genre,
                 loadingStatus: false,
             });
         });
     }
 
     render() {
-        console.log(this.state)
+        console.log(this.props)
         return (
             <React.Fragment>
             <form>

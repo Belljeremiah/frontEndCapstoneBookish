@@ -17,6 +17,18 @@
       "email": "me@email.com",
       "password": "me",
       "id": 3
+    },
+    {
+      "username": "mvp",
+      "email": "mvp@email.com",
+      "password": "mvp",
+      "id": 4
+    },
+    {
+      "username": "jisie",
+      "email": "jisie@nss.com",
+      "password": "123",
+      "id": 5
     }
   ],
   "messages": [
@@ -72,6 +84,15 @@
       "userId": 2,
       "bookshelfId": 4,
       "id": 17
+    },
+    {
+      "title": "kens book",
+      "author": "ken boyd",
+      "genre": "non fictitious fiction",
+      "rating": "6",
+      "userId": 3,
+      "bookshelfId": 0,
+      "id": 18
     }
   ],
   "bookshelves": [
@@ -94,10 +115,17 @@
       "id": 4
     },
     {
-      "shelfName": "shelf1",
-      "genre": "shelf1",
-      "userId": 3,
-      "id": 5
+      "id": 6,
+      "shelfName": "science fiction",
+      "loadingStatus": false,
+      "userId": 5
+    },
+    {
+      "id": 7,
+      "shelfName": "mvptest",
+      "genre": "mvptest2",
+      "loadingStatus": false,
+      "userId": 3
     }
   ],
   "Friends": [

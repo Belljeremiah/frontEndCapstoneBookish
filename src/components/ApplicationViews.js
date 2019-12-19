@@ -57,8 +57,7 @@ class ApplicationViews extends Component {
                 }} />
 
                 <Route exact path="/bookshelves/:shelfId(\d+)" render={(props) => {
-                return <ShelfDetail shelfId={parseInt(props.match.params.shelfId)} 
-                // THis is a spread operator that seperates out all the key values in the object and sets them all as props. Includes History and match we want history for history.push router property.
+                return <ShelfDetail shelfId={parseInt(props.match.params.shelfId)}
                 {...props}
                 />
                 }} />

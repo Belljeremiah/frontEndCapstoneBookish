@@ -78,7 +78,7 @@ class BookForm extends Component {
     };
 
     componentDidMount(){
-        console.log("BookForm ComponentDidMOunt")
+        console.log("BookForm ComponentDidMount")
         BookManager.getAllBookShelves()
         .then((response) => {this.setState({
             bookshelf: response
@@ -87,7 +87,7 @@ class BookForm extends Component {
     }
 
     render(){
-console.log(this.state.author)
+// console.log(this.state.author)
 console.log("Book Form Firing")
         return(
             <>
@@ -141,7 +141,7 @@ console.log("Book Form Firing")
                         
                         <button
                         type="button"
-                        // disabled={this.state.loadingStatus}
+                        disabled={this.state.loadingStatus}
                         onClick={this.constructNewBook}
                         >Submit</button>
                     </div>

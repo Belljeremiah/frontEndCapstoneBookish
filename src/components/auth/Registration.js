@@ -60,25 +60,25 @@ class Registration extends Component {
                         type="username"
                         id="username"
                         placeholder="Username"
-                        required="" autoFocus="" />
+                        required autoFocus />
 
                         <label htmlFor="inputEmail">Email Address</label>
                         <input onChange={this.registrationFieldChange} type="email"
                         id="email"
                         placeholder="Email Address"
-                        required="" autoFocus="" />
+                        required autoFocus />
 
                         <label htmlFor="inputPassword">Password</label>
                         <input onChange={this.registrationFieldChange} type="password"
                         id="password"
                         placeholder="Password"
-                        required="" autoFocus="" />
-                        {/* required? autofocus? */}
+                        required autoFocus />
+                        
                         <label htmlFor="confirmPassword">Confirm Password</label>
                         <input onChange={this.registrationFieldChange} type="password"
                         id="confirmPassword"
                         placeholder="Confirm Password"
-                        required="" autoFocus="" />
+                        required autoFocus />
                         </div>
                         <button id="register-button" className="button" type="submit">Submit Registration</button>
                         </fieldset>
