@@ -17,6 +17,12 @@
       "email": "me@email.com",
       "password": "me",
       "id": 3
+    },
+    {
+      "username": "mvp",
+      "email": "mvp@email.com",
+      "password": "mvp",
+      "id": 4
     }
   ],
   "messages": [

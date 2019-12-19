@@ -11,16 +11,17 @@ class BookEditForm extends Component {
         rating: "",
         loadingStatus: true,
     };
-
+    // function setup to be used to set target id and value to change state instantly and update as it is changed in the fields. Made possible by having the same id and value names.
     handleFieldChange = e => {
       const stateToChange = {}
       stateToChange[e.target.id] = e.target.value
       this.setState(stateToChange)
     }
-
+// Function for updating book when the button fires for submitting the changes by setting state to match.
     updateExistingBook = e => {
       e.preventDefault()
       this.setState({ loadingStatus: true });
+      // passing in the user Id. by grabbing it from credentials object in localStorage. Allows the passing vs match.params
       const userId = JSON.parse(localStorage.getItem("credentials"));
       const editedBook = {
         id: this.props.match.params.bookId,
@@ -37,6 +38,7 @@ class BookEditForm extends Component {
     }
 
     componentDidMount() {
+      console.log("BookEdit ComponentDidMount")
       BookManager.get(this.props.match.params.bookId)
       .then(book => {
           this.setState({
