@@ -16,15 +16,6 @@ setUser = (registerObj) => {
     this.setState({
         user: this.isRegistered()
     });
-
-// UsersManager.post(registerObj)
-// .then(newUser => {
-//     console.log("newUser", newUser)
-//     localStorage.setItem(
-//         "credentials",
-//         JSON.stringify(newUser)
-//     )
-//     this.setState({users: newUser})})
 }
 
 componentDidMount(){

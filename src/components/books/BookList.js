@@ -36,7 +36,7 @@ deleteBook = id => {
 
 render() {
     console.log("BookList: Render");
-    console.log(this.state.books)
+    // console.log(this.state.books)
     
     return(
         <React.Fragment>
@@ -64,16 +64,6 @@ render() {
     </React.Fragment>
     )
     }
-//   This is the old way of doing this from the first or second exercise use this as a reference for the now working code in how it needed to change.
-// render(){
-//     console.log("book LIST: Render");
-
-//     return(
-//         <div className="container-cards">
-//             {this.state.books.map(book => <bookCard />)}
-//         </div>
-//     )
-// }
 }
 
 export default BookList;
