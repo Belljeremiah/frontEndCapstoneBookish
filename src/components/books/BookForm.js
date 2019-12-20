@@ -8,6 +8,7 @@ class BookForm extends Component {
         title: "",
         author: "",
         genre: "",
+        imageUrl: "",
         rating: "",
         loadingStatus: false,
         items:{items:[]},
@@ -66,6 +67,7 @@ class BookForm extends Component {
                 title: this.state.title,
                 author: this.state.author,
                 genre: this.state.genre,
+                imageUrl: this.state.imageUrl,
                 rating: this.state.rating,
                 userId: userId.id,
                 bookshelfId: Number(this.state.selector)
@@ -120,6 +122,16 @@ console.log("Book Form Firing")
                         placeholder="Genre"
                         />
                         <label htmlFor="genre">Genre</label>
+
+                        <input
+                        type="text"
+                        required
+                        onChange={this.handleFieldChange}
+                        id="imageUrl"
+                        placeholder="ImageUrl"
+                        />
+                        <label htmlFor="imageUrl">ImageUrl</label>
+                        
                         
                         <input
                         type="text"

@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import BookManager from '../../modules/BookManager';
 import GoogleApiManager from '../../modules/GoogleApiManager';
 import BookSearchCard from '../books/BookSearchCard';
+import "bootstrap/dist/css/bootstrap.min.css"
+
 
 class BookSearchForm extends Component {
     state = {
         title: "",
         author: "",
         genre: "",
+        imageUrl: "",
         rating: "",
         loadingStatus: false,
         items:{items:[]},
@@ -31,7 +34,6 @@ class BookSearchForm extends Component {
             const search = {
                 volume: this.state.title,
                 author: this.state.author,
-                genre: this.state.genre,
     };
 
     GoogleApiManager.get(search.volume, search.author)
@@ -85,27 +87,9 @@ console.log("Book Form Firing")
                         placeholder="Author"
                         />
                         <label htmlFor="author">Author</label>
-                        
-                        <input
-                        type="text"
-                        required
-                        onChange={this.handleFieldChange}
-                        id="genre"
-                        placeholder="Genre"
-                        />
-                        <label htmlFor="genre">Genre</label>
-                        
-                        <input
-                        type="text"
-                        required
-                        onChange={this.handleFieldChange}
-                        id="rating"
-                        placeholder="Rating"
-                        />
-                        <label htmlFor="rating">Rating</label>
                     
                     </div>
-                    <div className="alignRight">
+                    <div className="btn btn-primary">
                         <button
                         type="button"
                         // disabled={this.state.loadingStatus}

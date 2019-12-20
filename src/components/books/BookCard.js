@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Card } from 'react-bootstrap'; 
 
 // Importing the ability to use Component from React, and the Link from React-router-dom for use with this card.
 
@@ -8,9 +9,10 @@ import { Link } from 'react-router-dom';
 class BookCard extends Component {
     
     render() {
-        console.log(this.props.book.id)
+        console.log("BookCard Render", this.props.book.imageUrl)
         return (
             <>
+            <Card>
                 <div className="card">
                     <div className="card-content">
                         {/* Because I have passed props from the parent component for this card I can gain access to the data, I can use render to display it with a return of JSX interpolated place holders. */}
@@ -24,6 +26,7 @@ class BookCard extends Component {
                         <Link to={`/books/${this.props.book.id}`}><button>Book Detail View</button></Link>
                     </div>
                 </div>
+            </Card>
             </>
         );
     }

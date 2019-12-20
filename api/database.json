@@ -86,13 +86,14 @@
       "id": 17
     },
     {
-      "title": "kens book",
-      "author": "ken boyd",
-      "genre": "non fictitious fiction",
-      "rating": "6",
-      "userId": 3,
-      "bookshelfId": 0,
-      "id": 18
+      "id": 18,
+      "title": "Journal 1",
+      "author": "Jeremiah",
+      "genre": "Hyperbolic Non-fiction",
+      "imageUrl": "www.googlesimage.com",
+      "rating": "1",
+      "loadingStatus": false,
+      "userId": 3
     }
   ],
   "bookshelves": [
@@ -121,11 +122,10 @@
       "userId": 5
     },
     {
-      "id": 7,
-      "shelfName": "mvptest",
-      "genre": "mvptest2",
-      "loadingStatus": false,
-      "userId": 3
+      "shelfName": "new shelf",
+      "genre": "new shelf",
+      "userId": 3,
+      "id": 7
     }
   ],
   "Friends": [

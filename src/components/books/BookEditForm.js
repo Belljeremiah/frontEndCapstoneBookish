@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import BookManager from "../../modules/BookManager"
-
+import { Card } from 'react-bootstrap'
 
 class BookEditForm extends Component {
     //set the initial state
@@ -8,6 +8,7 @@ class BookEditForm extends Component {
         title: "",
         author: "",
         genre: "",
+        imageUrl: "",
         rating: "",
         loadingStatus: true,
     };
@@ -28,6 +29,7 @@ class BookEditForm extends Component {
         title: this.state.title,
         author: this.state.author,
         genre: this.state.genre,
+        imageUrl: this.state.imageUrl,
         rating: this.state.rating,
         loadingStatus: false,
         userId: userId.id
@@ -44,8 +46,9 @@ class BookEditForm extends Component {
           this.setState({
             title: book.title,
             author: book.author,
-            genre: this.state.genre,
-            rating: this.state.rating,
+            genre: book.genre,
+            imageUrl: book.imageUrl,
+            rating: book.rating,
             loadingStatus: false,
           });
       });
@@ -54,10 +57,12 @@ class BookEditForm extends Component {
     render() {
       return (
         <>
+        <Card>
         <form>
           <fieldset>
             <div className="formgrid">
               
+              <label htmlFor="title">Title</label>
               <input
                 type="text"
                 required
@@ -66,8 +71,8 @@ class BookEditForm extends Component {
                 id="title"
                 value={this.state.title}
               />
-              <label htmlFor="title">Title</label>
 
+              <label htmlFor="author">Author</label>
               <input
                 type="text"
                 required
@@ -76,9 +81,9 @@ class BookEditForm extends Component {
                 id="author"
                 value={this.state.author}
               />
-              <label htmlFor="author">author</label>
             </div>
 
+            <label htmlFor="genre">Genre</label>
             <input
                 type="text"
                 required
@@ -87,8 +92,18 @@ class BookEditForm extends Component {
                 id="genre"
                 value={this.state.genre}
               />
-              <label htmlFor="genre">genre</label>
+
+            <label htmlFor="imageUrl">ImageUrl</label>
+            <input
+                type="text"
+                required
+                className="form-control"
+                onChange={this.handleFieldChange}
+                id="imageUrl"
+                value={this.state.imageUrl}
+              />
             
+            <label htmlFor="rating">Rating</label>
             <input
                 type="text"
                 required
@@ -97,17 +112,17 @@ class BookEditForm extends Component {
                 id="rating"
                 value={this.state.rating}
               />
-              <label htmlFor="rating">rating</label>
             
             <div className="alignRight">
               <button
                 type="button" disabled={this.state.loadingStatus}
                 onClick={this.updateExistingBook}
-                className="btn btn-primary"
+                className="btn btn-primary btn-lg"
               >Save</button>
             </div>
           </fieldset>
         </form>
+        </Card>
         </>
       );
     }
