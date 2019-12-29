@@ -145,7 +145,7 @@ console.log("Book Form Firing")
                         </div>
                         <div className="alignRight">
                         <select onChange={this.handleFieldChange} id="selector">
-                        <option>To be Dropdown</option>
+                        <option>Select a BookShelf</option>
                         {this.state.bookshelf.map((singleShelf) => {
                         return <option key={singleShelf.id} value={singleShelf.id}>{singleShelf.shelfName}</option>
                         })}

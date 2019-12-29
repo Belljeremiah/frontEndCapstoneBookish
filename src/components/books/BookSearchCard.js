@@ -67,11 +67,11 @@ class BookSearchCard extends Component {
                         }
                         </h3>
 
-                        <h3
+                        <img
                         id="imageUrl"
-                        onChange={this.handleFieldChange}>ImageUrl:
-                        {this.props.item.volumeInfo.imageLinks.smallThumbnail}
-                        </h3>
+                        onChange={this.handleFieldChange}
+                        src={`${this.props.item.volumeInfo.imageLinks.smallThumbnail}`} />
+                        
                         <h3>Rating: <span className="book-rating">
                         {this.props.item.volumeInfo.averageRating}
                         </span>

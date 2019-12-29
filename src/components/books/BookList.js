@@ -41,11 +41,13 @@ render() {
     return(
         <React.Fragment>
             <section className="section-content">
-                <button type="button" variant="primary" className="primary"
+                <button type="button" className="btn btn-primary"
                 onClick={() => {this.props.history.push("/books/new")}}>
                 Create book
                 </button>
-                <button type="button" variant="primary" className="primary"
+                <br></br>
+                <br></br>
+                <button type="button" className="btn btn-primary"
                 onClick={() => {this.props.history.push("/books/search")}}>
                 Search Google Books
                 </button>

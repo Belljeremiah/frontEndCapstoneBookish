@@ -41,7 +41,7 @@ render() {
     return(
         <React.Fragment>
             <section className="section-content">
-                <button type="button" class="btn btn-primary btn-lg"
+                <button type="button" className="btn btn-primary btn-lg"
                 onClick={() => {this.props.history.push("/bookshelves/new")}}>
                 Create Shelf
                 </button>

@@ -19,11 +19,13 @@ class BookCard extends Component {
                         <h1>Book Title: <span className="book-title">{this.props.book.title}</span></h1>
                         <h3>Book Author: {this.props.book.author}</h3>
                         <h3>Book Genre: {this.props.book.genre}</h3>
-                        <h3>ImageUrl: {this.props.book.imageUrl}</h3>
+                        <img src={`${this.props.book.imageUrl}`} alt={this.props.book.title} />
                         <h3>Rating: {this.props.book.rating}</h3>
-                        <button type="button" onClick={() => this.props.deleteBook(this.props.book.id)}>Delete Book</button>
-                        <button type="button" onClick={() => {this.props.history.push(`/books/${this.props.book.id}/edit`)}}>Edit</button>
-                        <Link to={`/books/${this.props.book.id}`}><button>Book Detail View</button></Link>
+                        <div className="btn-group" role="group">
+                        <button type="button" className="btn btn-primary" onClick={() => this.props.deleteBook(this.props.book.id)}>Delete Book</button>
+                        <button type="button" className="btn btn-primary" onClick={() => {this.props.history.push(`/books/${this.props.book.id}/edit`)}}>Edit</button>
+                        <Link to={`/books/${this.props.book.id}`}><button className="btn btn-primary">Book Detail View</button></Link>
+                    </div>
                     </div>
                 </div>
             </Card>
