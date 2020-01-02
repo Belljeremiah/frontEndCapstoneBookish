@@ -94,6 +94,16 @@
       "userId": 3,
       "bookshelfId": 0,
       "id": 18
+    },
+    {
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Juvenile Fiction",
+      "rating": 4.5,
+      "imageUrl": "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "userId": 3,
+      "bookshelfId": 0,
+      "id": 19
     }
   ],
   "bookshelves": [
@@ -120,6 +130,12 @@
       "shelfName": "science fiction",
       "loadingStatus": false,
       "userId": 5
+    },
+    {
+      "shelfName": "WorkerShelf",
+      "genre": "NonFiction",
+      "userId": 3,
+      "id": 7
     }
   ],
   "Friends": [
