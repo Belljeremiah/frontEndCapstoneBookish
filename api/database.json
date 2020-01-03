@@ -104,6 +104,16 @@
       "userId": 3,
       "bookshelfId": 0,
       "id": 19
+    },
+    {
+      "title": "Frankenstein, or, The Modern Prometheus",
+      "author": "Mary Wollstonecraft Shelley",
+      "genre": "Galvanic skin response",
+      "rating": 3.5,
+      "imageUrl": "http://books.google.com/books/content?id=2Zc3AAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "userId": 3,
+      "bookshelfId": 0,
+      "id": 20
     }
   ],
   "bookshelves": [

@@ -10,13 +10,10 @@ class Home extends Component {
     render() {
         return (
             <React.Fragment>
-            <section><h1>Welcome To Bookish So Far!</h1></section>
-            <div className="image-container d-flex flex-row align-items-center flex-grow-1">
-                <div className="d-flex min-vw-25 min-vh-25 flex-row justify-content-around">
-            <Link to="/books"><img className="book-icon imageLinks col-5" src={booksLink}></img></Link>
-            <Link to="/bookshelves"><img className="bookshelf-icon imageLinks col-5" src={bookshelfstack}></img></Link>
-            <Link to="/friends"><img className="friends-icon imageLinks" src={diverseFriends}></img></Link>
-                </div>
+            <div className="d-inline-flex flex-column bd-highlight">
+            <Link to="/books"><img className="book-icon p-2 bd-highlight imageLinks col-5" src={booksLink}></img></Link>
+            <Link to="/bookshelves"><img className="bookshelf-icon p-2 bd-highlight imageLinks col-5" src={bookshelfstack}></img></Link>
+            <Link to="/friends"><img className="friends-icon p-2 bd-highlight w-50 imageLinks col-5" src={diverseFriends}></img></Link>
             </div>
             
 

@@ -7,7 +7,7 @@ class NavBar extends Component {
     render() {
         return (
             <React.Fragment>
-            <nav className="navbar navbar-dark bg-dark">
+            <nav className="d-inline-flex p-2 navbar navbar-dark bg-dark">
                 <ul className="nav nav-pills nav-fill">
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>
@@ -33,10 +33,10 @@ class NavBar extends Component {
                 </>
                     : null }
                 </ul>
-                <span className="navbar-text">
+                <span className="navbar-item">
                     <ul className="nav nav-pills nav-fill">
                         
-                    <li className="nav-item">
+                    <li className="d-inline-flex p-2 nav-item">
                         <Link className="nav-link" to="/login">Login</Link>
                     </li>
                         

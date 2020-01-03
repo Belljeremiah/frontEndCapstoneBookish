@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BookManager from '../../modules/BookManager';
+import "bootstrap/dist/css/bootstrap.min.css"
 
 // Declaring a class/object with the ability to use Component Methods from React
 class BookDetail extends Component {
@@ -46,9 +47,9 @@ class BookDetail extends Component {
             <h1>Book Title: <span className="book-title">{this.state.title}</span></h1>
                 <h3>Book Author: {this.state.author}</h3>
                 <h3>Book Genre: {this.state.genre}</h3>
-                <h3>ImageUrl: {this.state.imageUrl}</h3>
+                <h3><img src={`${this.state.imageUrl}`}></img></h3>
                 <h3>Rating: {this.state.rating}</h3>
-            <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete Book</button>
+            <button type="button" className="btn-secondary btn-lg" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete Book</button>
         </div>
       </div>
     );
