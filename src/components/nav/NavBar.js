@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
+import bookIconRound2 from "../nav/bookIconRound2.png"
 
 
 class NavBar extends Component {
@@ -9,6 +10,7 @@ class NavBar extends Component {
             <React.Fragment>
             <nav className="p-2 navbar navbar-dark bg-dark nav-fill">
                 <ul className="nav nav-pills nav-fill">
+                <img src={bookIconRound2.png}></img>
                     {(this.props.user) ?
                         <>
                     <li className="nav-item">

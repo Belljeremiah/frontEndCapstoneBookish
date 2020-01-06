@@ -11,15 +11,15 @@ class ShelfCard extends Component {
             <>
             <Card>
                 <div className="card">
-                    <div className="card-content">
-                    <h3>Shelf Name: {this.props.shelf.shelfName}</h3>
-                    <h4>Shelf Genre: {this.props.shelf.genre}</h4>
+                    <div className="card-content d-flex flex-column justify-content-center">
+                    <h3 className="align-self-center">Shelf Name: {this.props.shelf.shelfName}</h3>
+                    <h4 className="align-self-center">Shelf Genre: {this.props.shelf.genre}</h4>
                     </div>
                     <button type="button" className="btn btn-primary btn-lg" onClick={() => this.props.history.push(`/bookshelves/${this.props.shelf.id}/edit`)}>Edit</button>
                     <br></br>
                     <button type="button" className="btn btn-secondary btn-lg" onClick={() => this.props.deleteShelf(this.props.shelf.id)}>Delete Shelf</button>
                     <br></br>
-                    <Link to={`/bookshelves/${this.props.shelf.id}`}><button type="button" className="btn btn-primary btn-lg">Shelf Detail View</button></Link>
+                    <Link className="align-self-center" to={`/bookshelves/${this.props.shelf.id}`}><button type="button" className="btn btn-primary btn-lg">Shelf Detail View</button></Link>
                 </div>
             </Card>
             </>
