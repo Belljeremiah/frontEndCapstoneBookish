@@ -8,6 +8,9 @@ export default {
     const userId = JSON.parse(localStorage.getItem("credentials"))
     return fetch(`${remoteURL}/books?userId=${userId.id}`).then(result => result.json())
   },
+  getBookByShelf(shelfId) {
+    return fetch(`${remoteURL}/books?bookshelfId=${shelfId}`).then(result => result.json())
+  },
   deleteBook(id) {
     return fetch(`http://localhost:5002/books/${id}`, {
         method: "DELETE"

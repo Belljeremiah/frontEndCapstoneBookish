@@ -27,7 +27,8 @@ class ApplicationViews extends Component {
                 }} />
 
                 <Route exact path="/books" render={(props) => {
-                    return <BookList {...props}/>
+                    return <BookList shelfId={parseInt(props.match.params.shelfId)}
+                    {...props}/>
                 }} />
 
                 <Route exact path="/books/:bookId(\d+)" render={(props) => {

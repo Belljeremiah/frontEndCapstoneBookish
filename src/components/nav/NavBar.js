@@ -7,13 +7,13 @@ class NavBar extends Component {
     render() {
         return (
             <React.Fragment>
-            <nav className="d-inline-flex p-2 navbar navbar-dark bg-dark">
+            <nav className="p-2 navbar navbar-dark bg-dark nav-fill">
                 <ul className="nav nav-pills nav-fill">
+                    {(this.props.user) ?
+                        <>
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>
                     </li>
-                    {(this.props.user) ?
-                    <>
                     <li className="nav-item">
                         <Link className="nav-link" to="/books">Books</Link>
                     </li>
@@ -22,13 +22,13 @@ class NavBar extends Component {
                         <Link className="nav-link" to="/bookshelves">BookShelves</Link>
                     </li>
                     
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link className="nav-link" to="/friends">Friends</Link>
                     </li>
                     
                     <li className="nav-item">
                         <Link className="nav-link" to="/messages">Messages</Link>
-                    </li>
+                    </li> */}
                     
                 </>
                     : null }

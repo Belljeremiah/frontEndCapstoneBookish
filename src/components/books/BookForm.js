@@ -95,7 +95,7 @@ console.log("Book Form Firing")
             <>
             <form>
                 <fieldset>
-                    <div className="formgrid">
+                    <div className="formgrid d-flex">
                         <input
                         type="text"
                         required

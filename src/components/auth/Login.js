@@ -60,6 +60,7 @@ class Login extends Component {
                 <button type="submit">
                     Sign in
                 </button>
+                <button id="googleLoginButton">Login with Google</button>
         </fieldset>
       </form>
             <button onClick={() => this.props.history.push("/Registration")}>Register New Account</button>

@@ -114,6 +114,16 @@
       "userId": 3,
       "bookshelfId": 0,
       "id": 20
+    },
+    {
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "genre": "Juvenile Fiction",
+      "rating": 5,
+      "imageUrl": "http://books.google.com/books/content?id=hmUURjx3cSQC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "userId": 3,
+      "bookshelfId": 8,
+      "id": 21
     }
   ],
   "bookshelves": [
@@ -146,6 +156,12 @@
       "genre": "NonFiction",
       "userId": 3,
       "id": 7
+    },
+    {
+      "shelfName": "Brothers Books o Horror",
+      "genre": "Spooky",
+      "userId": 3,
+      "id": 8
     }
   ],
   "Friends": [

@@ -9,7 +9,7 @@ import { Card } from 'react-bootstrap';
 class BookCard extends Component {
     
     render() {
-        console.log("BookCard Render", this.props.book.imageUrl)
+        // console.log("BookCard Render", this.props.book.imageUrl)
         return (
             <>
             <Card>
@@ -22,9 +22,9 @@ class BookCard extends Component {
                         <img src={`${this.props.book.imageUrl}`} alt={this.props.book.title} />
                         <h3>Rating: {this.props.book.rating}</h3>
                         <div className="btn-group" role="group">
-                        <button type="button" className="btn btn-primary" onClick={() => this.props.deleteBook(this.props.book.id)}>Delete Book</button>
-                        <button type="button" className="btn btn-primary" onClick={() => {this.props.history.push(`/books/${this.props.book.id}/edit`)}}>Edit</button>
-                        <Link to={`/books/${this.props.book.id}`}><button className="btn btn-primary">Book Detail View</button></Link>
+                        <button type="button" className="btn btn-primary btn-lg" onClick={() => this.props.deleteBook(this.props.book.id)}>Delete Book</button>
+                        <button type="button" className="btn btn-primary btn-lg" onClick={() => {this.props.history.push(`/books/${this.props.book.id}/edit`)}}>Edit</button>
+                        <Link to={`/books/${this.props.book.id}`}><button className="btn btn-primary btn-lg">Book Detail View</button></Link>
                     </div>
                     </div>
                 </div>

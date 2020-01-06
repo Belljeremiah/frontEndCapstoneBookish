@@ -57,15 +57,6 @@ class BookSearchCard extends Component {
                         return(singleAuthor)
                         })}
                         </h3>
-                        
-                        <h3
-                        id="genre"
-                        onChange={this.handleFieldChange}>Book Genre: {
-                        this.props.item.volumeInfo.categories.map((singleCategory) => {
-                            return(singleCategory)
-                        })
-                        }
-                        </h3>
 
                         <img
                         id="imageUrl"

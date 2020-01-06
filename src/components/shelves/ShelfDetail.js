@@ -24,7 +24,6 @@ class ShelfDetail extends Component {
 
     handleDelete = () => {
         this.setState({loadingStatus: true})
-        const userId = JSON.parse(localStorage.getItem("credentials"));
         BookManager.deleteShelf(this.props.match.params.shelfId)
         .then(() => this.props.history.push("/bookshelves"))
 }

@@ -1,25 +1,12 @@
-/* .image-container {
-    margin-top: 40px;
-    flex: auto; */
-    /* flex-wrap: auto;
-    justify-content: ;
-    align-content: baseline; */
-/* } */
-/* .book-icon {
-    margin-top: 10px; */
-    /* flex: auto;
-    width: min-content;
-    height: min-content;
-    
+.imagelink-container {
+    justify-content: center;
+ }
+.book-icon {
+    box-shadow: black;
 }
 .bookshelf-icon {
-    /* flex: auto;
-    margin-top: 20px;
-    max-width: max-content;
-    height: max-content;
+    
 }
 .friends-icon {
-    /* flex: auto; */
-    /* max-width: min-content;
-    height: min-content;
-} */
+    
+}
