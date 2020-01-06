@@ -72,7 +72,7 @@ render() {
                 </select>
                 <br></br>
                 <button type="button" className="btn btn-secondary btn-md"
-                onClick={this.bookByShelf}>Select Book By Shelf</button>
+                onClick={this.bookByShelf}>Display Books By Shelf</button>
                 <br></br>
                 <button type="button" className="btn btn-primary btn-lg"
                 onClick={() => {this.props.history.push("/books/search")}}>

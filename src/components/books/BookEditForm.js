@@ -55,6 +55,7 @@ class BookEditForm extends Component {
     }
 
     render() {
+      console.log("state", this.state)
       return (
         <>
         <Card>

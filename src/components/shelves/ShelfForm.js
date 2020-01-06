@@ -41,13 +41,13 @@ class ShelfForm extends Component {
             <>
             <form>
                 <fieldset>
-                    <div className="formgrid">
+                    <div className="formgrid d-flex flex-column">
                         <input
                         type="text"
                         required
                         onChange={this.handleFieldChange}
                         id="shelfName"
-                        placeholder="SHelf Name"
+                        placeholder="Shelf Name"
                         />
                         <label htmlFor="shelfName">Name</label>
                         <input
@@ -55,13 +55,14 @@ class ShelfForm extends Component {
                         required
                         onChange={this.handleFieldChange}
                         id="genre"
-                        placeholder="genre"
+                        placeholder="Genre"
                         />
-                        <label htmlFor="genre">genre</label>
+                        <label htmlFor="genre">Genre</label>
                     </div>
                     <div className="alignRight">
                         <button
                         type="button"
+                        className="btn btn-primary btn-lg"
                         disabled={this.state.loadingStatus}
                         onClick={this.constructNewShelf}
                         >Submit</button>

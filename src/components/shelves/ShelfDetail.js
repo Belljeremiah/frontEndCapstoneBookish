@@ -35,7 +35,7 @@ class ShelfDetail extends Component {
         <div className="card-content">
             <h2>Name: <span className="shelf-name">{this.state.shelfName}</span></h2>
             <h3>Genre: {this.state.genre}</h3>
-            <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete Shelf</button>
+            <button type="button" className="btn btn-secondary btn-lg"disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete Shelf</button>
         </div>
       </div>
         );

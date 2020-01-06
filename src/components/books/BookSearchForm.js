@@ -68,8 +68,8 @@ console.log("Book Form Firing")
         return(
             <>
             <form>
-                <fieldset>
-                    <div className="formgrid">
+                <fieldset className="d-inline-flex flex-column">
+                    <div className="formgrid d-flex flex-column">
                         <input
                         type="text"
                         required
@@ -89,9 +89,10 @@ console.log("Book Form Firing")
                         <label htmlFor="author">Author</label>
                     
                     </div>
-                    <div className="btn btn-primary">
+                    <div className="">
                         <button
                         type="button"
+                        className="btn btn-primary btn-lg"
                         // disabled={this.state.loadingStatus}
                         onClick={this.searchNewBook}
                         >Search</button>

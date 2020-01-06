@@ -86,36 +86,6 @@
       "id": 17
     },
     {
-      "title": "The Hobbit, Or, There and Back Again",
-      "author": "John Ronald Reuel Tolkien",
-      "genre": "FICTION",
-      "rating": 4,
-      "imageUrl": "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "userId": 3,
-      "bookshelfId": 0,
-      "id": 18
-    },
-    {
-      "title": "The Hobbit",
-      "author": "J.R.R. Tolkien",
-      "genre": "Juvenile Fiction",
-      "rating": 4.5,
-      "imageUrl": "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "userId": 3,
-      "bookshelfId": 0,
-      "id": 19
-    },
-    {
-      "title": "Frankenstein, or, The Modern Prometheus",
-      "author": "Mary Wollstonecraft Shelley",
-      "genre": "Galvanic skin response",
-      "rating": 3.5,
-      "imageUrl": "http://books.google.com/books/content?id=2Zc3AAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "userId": 3,
-      "bookshelfId": 0,
-      "id": 20
-    },
-    {
       "title": "Dracula",
       "author": "Bram Stoker",
       "genre": "Juvenile Fiction",
@@ -124,6 +94,45 @@
       "userId": 3,
       "bookshelfId": 8,
       "id": 21
+    },
+    {
+      "title": "Unicorns",
+      "author": "Abby Colich",
+      "genre": "Juvenile Nonfiction",
+      "rating": 3.5,
+      "imageUrl": "http://books.google.com/books/content?id=J1oe4D5KBBkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "userId": 3,
+      "bookshelfId": 9,
+      "id": 22
+    },
+    {
+      "title": "The Dragon Reborn",
+      "author": "Robert Jordan",
+      "genre": "Fiction",
+      "rating": 4,
+      "imageUrl": "http://books.google.com/books/content?id=HZlVJVT91nAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "userId": 3,
+      "bookshelfId": 10,
+      "id": 23
+    },
+    {
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Juvenile Fiction",
+      "rating": 4.5,
+      "imageUrl": "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "userId": 3,
+      "bookshelfId": 10,
+      "id": 24
+    },
+    {
+      "title": "Unicorns",
+      "author": "Megan Atwood",
+      "genre": "Juvenile Nonfiction",
+      "imageUrl": "http://books.google.com/books/content?id=rJxxAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "userId": 3,
+      "bookshelfId": 9,
+      "id": 25
     }
   ],
   "bookshelves": [
@@ -162,6 +171,18 @@
       "genre": "Spooky",
       "userId": 3,
       "id": 8
+    },
+    {
+      "shelfName": "Jeremiahs Unicorn Obsession",
+      "genre": "Fiction but always hoping....",
+      "userId": 3,
+      "id": 9
+    },
+    {
+      "shelfName": "Epic Fantasy",
+      "genre": "Epic",
+      "userId": 3,
+      "id": 10
     }
   ],
   "Friends": [

@@ -42,9 +42,9 @@ class Login extends Component {
     return (
       <React.Fragment>
       <form onSubmit={this.handleLogin}>
-        <fieldset>
-            <h3>Please sign in</h3>
-            <div className="formgrid">
+        <fieldset className="d-inline-flex flex-column flex-wrap">
+            <h3>Please Sign In</h3>
+            <div className="formgrid d-flex flex-column">
                 <input onChange={this.handleFieldChange} type="email"
                     id="email"
                     placeholder="Email address"
@@ -57,13 +57,15 @@ class Login extends Component {
                     required />
                 <label htmlFor="inputPassword">Password</label>
             </div>
-                <button type="submit">
+                <button type="submit" className="btn btn-primary btn-md">
                     Sign in
                 </button>
-                <button id="googleLoginButton">Login with Google</button>
+                <br></br>
+                {/* <button id="googleLoginButton">Login with Google</button> */}
         </fieldset>
       </form>
-            <button onClick={() => this.props.history.push("/Registration")}>Register New Account</button>
+            <h3>No Account? Please Start Here</h3>
+            <button className="btn btn-secondary btn-md" onClick={() => this.props.history.push("/Registration")}>Register New Account</button>
             </React.Fragment>
     )
   }

@@ -95,7 +95,7 @@ console.log("Book Form Firing")
             <>
             <form>
                 <fieldset>
-                    <div className="formgrid d-flex">
+                    <div className="formgrid d-flex flex-column bd-highlight mb-3">
                         <input
                         type="text"
                         required
@@ -153,6 +153,7 @@ console.log("Book Form Firing")
                         
                         <button
                         type="button"
+                        className="btn btn-primary btn-sm"
                         disabled={this.state.loadingStatus}
                         onClick={this.constructNewBook}
                         >Submit</button>
